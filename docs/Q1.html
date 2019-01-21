@@ -83,6 +83,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">課題１ 多層パーセプトロンによるパターン識別</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#github">課題1の github 上でのクローン</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">リポジトリのローカルへのクローン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#readme-md">README.md の修正</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">課題1</a></li>
 </ul>
 </li>
@@ -181,6 +182,17 @@ $ git clone 取得したURL
 適宜ディレクトリをほってもらってもOKです．
 また，クローンには，大学内の場合は，Clone with https の方が良いでしょう．</p>
 </div>
+<div class="section" id="readme-md">
+<h2>README.md の修正<a class="headerlink" href="#readme-md" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>最初に行う作業は， <code class="docutils literal notranslate"><span class="pre">README.md</span></code> の修正です．</p>
+<ul class="simple">
+<li>学籍番号</li>
+<li>氏名</li>
+</ul>
+<p>の欄を適宜自分のものにかえて，この時点で， <cite>git add</cite>, <cite>git commit</cite>
+および <cite>git commit</cite> までの作業を行ってください．</p>
+<p>なお，スクリプトで学籍番号情報を抜き出しますので <em>フォーマットは維持</em> してください．</p>
+</div>
 <div class="section" id="id3">
 <h2>課題1<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>課題1 は，MNIST と呼ばれる数字データの識別実験を多層パーセプトロン(MLP)で行います．
@@ -198,6 +210,15 @@ $ git clone 取得したURL
 <p>が演習にあたります．課題１は， <code class="docutils literal notranslate"><span class="pre">05.MNIST.ipynb</span></code> と <code class="docutils literal notranslate"><span class="pre">04.Classification.ipynb</span></code>
 とを解くことによって，これらの組み合わせをつかうことで解くことが可能になります．</p>
 <p>演習の解答例は <code class="docutils literal notranslate"><span class="pre">PracticeHint</span></code> の中にあります．</p>
+<p>適宜 <cite>git add</cite>, <cite>git commit</cite> および <cite>git push</cite> を行ってください．
+以下の時点での登録は必須事項とします．
+この点について提出が守られていないものに関しては <em>減点対象</em> とします．</p>
+<ul class="simple">
+<li>各演習を終わらせた段階で，その都度 <cite>git add</cite>, <cite>git commit</cite>, <cite>git push</cite> までを
+おこなうこと．commit メッセージは演習おわりとでも書いておけばよいです．
+したがって，課題が終了する時点で，最低でも６回(演習５回＋課題１回)は commit が行われていることになるはずです．</li>
+<li>その日の作業を終了した場合は，<cite>git add</cite> と <cite>git commit</cite> および <cite>git push</cite> の作業を行ってください．</li>
+</ul>
 </div>
 </div>
 
