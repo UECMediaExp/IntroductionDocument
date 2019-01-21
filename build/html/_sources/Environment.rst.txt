@@ -44,11 +44,10 @@ notebook ディレクトリを作ります．
 こんどは，GPU サーバへ，Web を解してアクセスします．
 Web ブラウザを用いて，
 
-
-http://gpu1.ied.inf.uec.ac.jp/
+http://gpu01.ced.cei.uec.ac.jp/ 
 
 へアクセスしてください．
-IEDのGPUサーバ (8GPUサーバ(1080Ti*8) 4台)が利用可能です．
+CEDのGPUサーバ (1GPUサーバ(1080Ti*1) 34台)が利用可能です．
 学内アクセス限定です．
 
 GPU があいているサーバーを選びます．
