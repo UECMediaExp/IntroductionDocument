@@ -20,7 +20,7 @@ https://classroom.github.com/a/ga_vFQBu
 リポジトリを削除します．
 
 
-ここまでで，各自の github アカウント上に，``2018ML-Q1-学籍番号`` という
+ここまでで，各自の github アカウント上に，``2018ML-Q1-githubのID`` という
 リポジトリが作成されていると思います．
 
 
@@ -56,6 +56,12 @@ README.md の修正
 および `git commit` までの作業を行ってください．
 
 なお，スクリプトで学籍番号情報を抜き出しますので *フォーマットは維持* してください．
+
+
+
+.. raw:: html
+
+         <iframe src="https://mm.cs.uec.ac.jp/media/chk.cgi" seamless width=600 height=250></iframe>
 
 
 
