@@ -49,7 +49,7 @@ http://gpu1.ied.inf.uec.ac.jp/
 
 CEDの34個のGPU (1GPUサーバ * 34台(ただし2台故障中))
 
-http://gpu01.ced.inf.uec.ac.jp/
+http://gpu01.ced.cei.uec.ac.jp/
 
 も活用してください．どちらも同じように利用可能です．
 
