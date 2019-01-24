@@ -12,6 +12,8 @@
 
    Environment
    Q1
+   Appendix
+
 
 Indices and tables
 ==================
