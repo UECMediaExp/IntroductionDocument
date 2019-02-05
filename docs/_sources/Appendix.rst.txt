@@ -51,6 +51,38 @@ MNIST を大学でダウンロードする場合には， proxy を設定する�
     del show_graph2
 
 
+課題 `kadai2-4.ipynb` 更新
+---------------------------------------------------------------------
+
+`kadai2-4.ipynb` の差分部分を貼り付けます． proxy の部分を書き換えてください
+
+.. code-block:: python
+
+  os.environ["http_proxy"] = "http://proxy.uec.ac.jp:8080/"
+  os.environ["https_proxy"] = "http://proxy.uec.ac.jp:8080/"
+
+
+
+課題 `kadai2-5.ipynb` 更新
+---------------------------------------------------------------------
+
+`kadai2-5.ipynb` の差分部分を貼り付けます
+Animaldataset のディレクトリまでのパスを指定することが必要なので，
+
+.. code-block:: python
+
+  # CED/IEDを自動判定して，datadir をセット．
+  cdir=os.getcwd()
+  if '/IED_HOME/' in cdir or '/.ced_ubuntu/' in cdir:
+    datadir="/ced-home/staff/yanai/media/"
+  else:
+    datadir="/usr/local/class/object/media/"
+
+  if '/yanai/' in cdir:
+    datadir="/export/space/yanai/media/"
+
+
+
 
 Github で実験資料が更新された場合の対処（うまく動かない）
 ---------------------------------------------------------------------
