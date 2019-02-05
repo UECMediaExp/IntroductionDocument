@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>課題１ 多層パーセプトロンによるパターン識別 &mdash; Media Experiment Machine Learning / Computer Vision  ドキュメント</title>
+  <title>課題３ 深層学習その２ &mdash; Media Experiment Machine Learning / Computer Vision  ドキュメント</title>
   
 
   
@@ -24,8 +24,7 @@
 
   
 
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" /> 
@@ -127,7 +126,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>課題１ 多層パーセプトロンによるパターン識別</li>
+      <li>課題３ 深層学習その２</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -147,14 +146,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>課題１ 多層パーセプトロンによるパターン識別<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>課題３ 深層学習その２<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="section" id="github">
-<h2>課題1の github 上でのクローン<a class="headerlink" href="#github" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>課題3の github 上でのクローン<a class="headerlink" href="#github" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>課題は github classroom から提供されます．</p>
-<p><a class="reference external" href="https://classroom.github.com/a/ga_vFQBu">https://classroom.github.com/a/ga_vFQBu</a></p>
-<p>を踏んでください．</p>
-<p>自分の学籍番号がのリストが出ますので，自分の学籍番号をクリックして
-自分の github アカウントへリポジトリをクローンしてください．</p>
+<p><a class="reference external" href="https://classroom.github.com/a/RFjYZIIt">https://classroom.github.com/a/RFjYZIIt</a></p>
+<p>を踏んで自分の github アカウントへリポジトリをクローンしてください．</p>
 <p>もし間違った学籍番号を推してしまった場合や，キャンセルボタンを押して
 不完全なリポジトリを作ってしまった場合は，TA もしくは庄野まで
 連絡してください．
@@ -164,57 +161,17 @@
 </div>
 <div class="section" id="id2">
 <h2>リポジトリのローカルへのクローン<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>次に，作業を行うため，github 上のリポジトリを CED のローカルマシンにクローンします．
-場所は，準備のところで述べたように <code class="docutils literal notranslate"><span class="pre">notebook</span></code> ディレクトリの下に無いと jupyterhub が
-読み込めませんので注意してください．
-クローンには，github の <code class="docutils literal notranslate"><span class="pre">clone</span> <span class="pre">or</span> <span class="pre">download</span></code> ボタンを押して URL を取得後，
-端末で，</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/notebook
-$ git clone 取得したURL
-</pre></div>
-</div>
-<p>で取得します．ディレクトリは notebook より下であれば，jupyterhub は読めますので，
-適宜ディレクトリをほってもらってもOKです．
-また，クローンには，大学内の場合は，Clone with https の方が良いでしょう．</p>
+<p>ここは課題１と同様です．</p>
 </div>
 <div class="section" id="readme-md">
 <h2>README.md の修正<a class="headerlink" href="#readme-md" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>最初に行う作業は，ブランチの作成と <code class="docutils literal notranslate"><span class="pre">README.md</span></code> の修正です．
-まず，作業ブランチを切ってください．名前は適当でよいですが
-この場合は WorkInProgress などで良いです．</p>
-<p>次に <code class="docutils literal notranslate"><span class="pre">README.md</span></code> の修正ですが，これは</p>
-<ul class="simple">
-<li>学籍番号</li>
-<li>氏名</li>
-</ul>
-<p>の欄を適宜自分のものにかえて，この時点で， <cite>git add</cite>, <cite>git commit</cite>
-および <cite>git commit</cite> までの作業を行ってください．</p>
-<p>なお，スクリプトで学籍番号情報を抜き出しますので <em>フォーマットは維持</em> してください．</p>
+<p>ここも課題１と同様です．</p>
 <iframe src="https://mm.cs.uec.ac.jp/media/chk.cgi" seamless width=600 height=250></iframe></div>
 <div class="section" id="id3">
-<h2>課題1<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>課題1 は，MNIST と呼ばれる数字データの識別実験を多層パーセプトロン(MLP)で行います．
-各リポジトリ内にある， <code class="docutils literal notranslate"><span class="pre">Question.ipynb</span></code> というファイルに課題を解いて出してください．</p>
-<p>なお，課題を解くにあたり，演習を５題用意しました．</p>
-<blockquote>
-<div><ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">01.Regression1.ipynb</span></code> １変数の回帰問題（最小二乗法）</li>
-<li><code class="docutils literal notranslate"><span class="pre">02.Classification1.ipynb</span></code> 1変数の識別問題（ロジスティック回帰）</li>
-<li><code class="docutils literal notranslate"><span class="pre">03.Classification2.ipynb</span></code> 2変数の識別問題（ロジスティック回帰）</li>
-<li><code class="docutils literal notranslate"><span class="pre">04.Classification3.ipynb</span></code> 2変数の識別問題（MLP）</li>
-<li><code class="docutils literal notranslate"><span class="pre">05.MNIST.ipynb</span></code> MNISTデータセットのロジスティック回帰による識別</li>
-</ul>
-</div></blockquote>
-<p>が演習にあたります．課題１は， <code class="docutils literal notranslate"><span class="pre">05.MNIST.ipynb</span></code> と <code class="docutils literal notranslate"><span class="pre">04.Classification.ipynb</span></code>
-とを解くことによって，これらの組み合わせをつかうことで解くことが可能になります．</p>
-<p>演習の解答例は <code class="docutils literal notranslate"><span class="pre">PracticeHint</span></code> の中にあります．</p>
-<p>適宜 <cite>git add</cite>, <cite>git commit</cite> および <cite>git push</cite> を行ってください．
-以下の時点での登録は必須事項とします．
-この点について提出が守られていないものに関しては <em>減点対象</em> とします．</p>
+<h2>課題3<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>課題3 は，Github に内包される Jupyter notebook を実行するという体でで
+実施を行ってください．課題に関しても notebook の内に記載してあります．</p>
 <ul class="simple">
-<li>各演習を終わらせた段階で，その都度 <cite>git add</cite>, <cite>git commit</cite>, <cite>git push</cite> までを
-おこなうこと．commit メッセージは演習おわりとでも書いておけばよいです．
-したがって，課題が終了する時点で，最低でも６回(演習５回＋課題１回)は commit が行われていることになるはずです．</li>
 <li>その日の作業を終了した場合は，<cite>git add</cite> と <cite>git commit</cite> および <cite>git push</cite> の作業を行ってください．</li>
 </ul>
 </div>
@@ -231,7 +188,7 @@ $ git clone 取得したURL
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Hayaru Shouno.
+        &copy; Copyright 2019, Hayaru Shouno
 
     </p>
   </div>
@@ -250,29 +207,29 @@ $ git clone 取得したURL
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            LANGUAGE:'ja',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'ja',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
   <script type="text/javascript">
       jQuery(function () {

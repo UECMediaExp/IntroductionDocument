@@ -24,8 +24,7 @@
 
   
 
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
@@ -86,6 +85,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#mnist">演習1-5 の MNIST　データセットダウンロード</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">2019/01/22 の資料</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#kadai2-3-ipynb">課題 <cite>kadai2-3.ipynb</cite> 更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kadai2-4-ipynb">課題 <cite>kadai2-4.ipynb</cite> 更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kadai2-5-ipynb">課題 <cite>kadai2-5.ipynb</cite> 更新</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#github">Github で実験資料が更新された場合の対処（うまく動かない）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ced-gpu">学外からの CED の GPU サーバーアクセス</a></li>
 </ul>
@@ -191,6 +192,30 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="kadai2-4-ipynb">
+<h2>課題 <cite>kadai2-4.ipynb</cite> 更新<a class="headerlink" href="#kadai2-4-ipynb" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><cite>kadai2-4.ipynb</cite> の差分部分を貼り付けます． proxy の部分を書き換えてください</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;http_proxy&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;http://proxy.uec.ac.jp:8080/&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;https_proxy&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;http://proxy.uec.ac.jp:8080/&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="kadai2-5-ipynb">
+<h2>課題 <cite>kadai2-5.ipynb</cite> 更新<a class="headerlink" href="#kadai2-5-ipynb" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><cite>kadai2-5.ipynb</cite> の差分部分を貼り付けます
+Animaldataset のディレクトリまでのパスを指定することが必要なので，</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># CED/IEDを自動判定して，datadir をセット．</span>
+<span class="n">cdir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="k">if</span> <span class="s1">&#39;/IED_HOME/&#39;</span> <span class="ow">in</span> <span class="n">cdir</span> <span class="ow">or</span> <span class="s1">&#39;/.ced_ubuntu/&#39;</span> <span class="ow">in</span> <span class="n">cdir</span><span class="p">:</span>
+  <span class="n">datadir</span><span class="o">=</span><span class="s2">&quot;/ced-home/staff/yanai/media/&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="n">datadir</span><span class="o">=</span><span class="s2">&quot;/usr/local/class/object/media/&quot;</span>
+
+<span class="k">if</span> <span class="s1">&#39;/yanai/&#39;</span> <span class="ow">in</span> <span class="n">cdir</span><span class="p">:</span>
+  <span class="n">datadir</span><span class="o">=</span><span class="s2">&quot;/export/space/yanai/media/&quot;</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="github">
 <h2>Github で実験資料が更新された場合の対処（うまく動かない）<a class="headerlink" href="#github" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>github では課題資料の更新がしばしば行われます．
@@ -246,7 +271,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Hayaru Shouno.
+        &copy; Copyright 2019, Hayaru Shouno
 
     </p>
   </div>
@@ -265,29 +290,29 @@
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            LANGUAGE:'ja',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'ja',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
   <script type="text/javascript">
       jQuery(function () {

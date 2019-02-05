@@ -24,8 +24,7 @@
 
   
 
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
@@ -82,6 +81,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Environment.html">実験環境の解説</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Q1.html">課題１ 多層パーセプトロンによるパターン識別</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Q2.html">課題２ Keras を用いた深層学習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Q3.html">課題３ 深層学習その２</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Appendix.html">追加情報</a></li>
 </ul>
 
@@ -165,10 +166,26 @@
 <li class="toctree-l2"><a class="reference internal" href="Q1.html#id3">課題1</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Q2.html">課題２ Keras を用いた深層学習</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Q2.html#github">課題2の github 上でのクローン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Q2.html#id1">リポジトリのローカルへのクローン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Q2.html#readme-md">README.md の修正</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Q2.html#id2">課題2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Q3.html">課題３ 深層学習その２</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Q3.html#github">課題3の github 上でのクローン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Q3.html#id2">リポジトリのローカルへのクローン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Q3.html#readme-md">README.md の修正</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Q3.html#id3">課題3</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Appendix.html">追加情報</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Appendix.html#mnist">演習1-5 の MNIST　データセットダウンロード</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Appendix.html#id2">2019/01/22 の資料</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Appendix.html#kadai2-3-ipynb">課題 <cite>kadai2-3.ipynb</cite> 更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Appendix.html#kadai2-4-ipynb">課題 <cite>kadai2-4.ipynb</cite> 更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Appendix.html#kadai2-5-ipynb">課題 <cite>kadai2-5.ipynb</cite> 更新</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Appendix.html#github">Github で実験資料が更新された場合の対処（うまく動かない）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Appendix.html#ced-gpu">学外からの CED の GPU サーバーアクセス</a></li>
 </ul>
@@ -203,7 +220,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Hayaru Shouno.
+        &copy; Copyright 2019, Hayaru Shouno
 
     </p>
   </div>
@@ -222,29 +239,29 @@
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            LANGUAGE:'ja',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'ja',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
   <script type="text/javascript">
       jQuery(function () {

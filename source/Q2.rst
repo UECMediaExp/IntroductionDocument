@@ -49,5 +49,4 @@ README.md の修正
 実施を行ってください．課題に関しても notebook の内に記載してあります．
 
 
-適宜 `git add`, `git commit` および `git push` を行ってください．
-以下の時点での登録は必須事項とします．
+* その日の作業を終了した場合は，`git add` と `git commit` および `git push` の作業を行ってください．
