@@ -30,11 +30,40 @@ MNIST を大学でダウンロードする場合には， proxy を設定する�
 `資料 PDF <20190122.pdf>`_
 
 
-Github で実験資料が更新された場合の対処
+課題 `kadai2-3.ipynb` 更新
+---------------------------------------------------------------------
+
+更新方法がうまくできないようですので　`kadai2-3.ipynb` の差分部分を貼り付けます
+
+.. code-block:: python
+
+    num_epoch=30
+    batch_size=100
+
+    show_graph2=ShowGraph(num_epoch)
+
+    reduce_lr2 =keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.1,patience=5, min_lr=0.0001)
+    # ImageDataGeneratorを使った場合は，学習には fit でなくて，generatorから画像を読む fit_generator を使います．
+    # 第一引数は，datagen.flow(x_train, Y_train, batch_size=100) などとします．
+    history2 = model2.fit_generator(datagen.flow(x_train, Y_train, batch_size=batch_size), epochs=num_epoch+1, steps_per_epoch=len(x_train)//batch_size,
+                                validation_steps=len(x_test)//batch_size, validation_data=test_datagen.flow(x_test,Y_test,batch_size=batch_size), 
+                                verbose=0, callbacks=[show_graph2, reduce_lr2])
+    del show_graph2
+
+
+
+Github で実験資料が更新された場合の対処（うまく動かない）
 ---------------------------------------------------------------------
 
 github では課題資料の更新がしばしば行われます．
 そのため，以下のコマンドを git レポジトリ上で実行して適宜，更新を行ってください．
+
+* 課題1 の場合
+  
+.. code-block:: sh
+
+    git pull https://github.com/UECMediaExp/Kadai1Shouno master
+
 
 * 課題2 の場合
   

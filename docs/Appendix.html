@@ -85,7 +85,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">追加情報</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#mnist">演習1-5 の MNIST　データセットダウンロード</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">2019/01/22 の資料</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#github">Github で実験資料が更新された場合の対処</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kadai2-3-ipynb">課題 <cite>kadai2-3.ipynb</cite> 更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github">Github で実験資料が更新された場合の対処（うまく動かない）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ced-gpu">学外からの CED の GPU サーバーアクセス</a></li>
 </ul>
 </li>
@@ -172,10 +173,34 @@
 <p>下記から資料をダウンロードできるはずです．</p>
 <p><a class="reference external" href="20190122.pdf">資料 PDF</a></p>
 </div>
+<div class="section" id="kadai2-3-ipynb">
+<h2>課題 <cite>kadai2-3.ipynb</cite> 更新<a class="headerlink" href="#kadai2-3-ipynb" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>更新方法がうまくできないようですので　<cite>kadai2-3.ipynb</cite> の差分部分を貼り付けます</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">num_epoch</span><span class="o">=</span><span class="mi">30</span>
+<span class="n">batch_size</span><span class="o">=</span><span class="mi">100</span>
+
+<span class="n">show_graph2</span><span class="o">=</span><span class="n">ShowGraph</span><span class="p">(</span><span class="n">num_epoch</span><span class="p">)</span>
+
+<span class="n">reduce_lr2</span> <span class="o">=</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">ReduceLROnPlateau</span><span class="p">(</span><span class="n">monitor</span><span class="o">=</span><span class="s1">&#39;val_loss&#39;</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">patience</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">min_lr</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">)</span>
+<span class="c1"># ImageDataGeneratorを使った場合は，学習には fit でなくて，generatorから画像を読む fit_generator を使います．</span>
+<span class="c1"># 第一引数は，datagen.flow(x_train, Y_train, batch_size=100) などとします．</span>
+<span class="n">history2</span> <span class="o">=</span> <span class="n">model2</span><span class="o">.</span><span class="n">fit_generator</span><span class="p">(</span><span class="n">datagen</span><span class="o">.</span><span class="n">flow</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">),</span> <span class="n">epochs</span><span class="o">=</span><span class="n">num_epoch</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">steps_per_epoch</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">x_train</span><span class="p">)</span><span class="o">//</span><span class="n">batch_size</span><span class="p">,</span>
+                            <span class="n">validation_steps</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span><span class="o">//</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="n">test_datagen</span><span class="o">.</span><span class="n">flow</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span><span class="n">Y_test</span><span class="p">,</span><span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">),</span>
+                            <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">show_graph2</span><span class="p">,</span> <span class="n">reduce_lr2</span><span class="p">])</span>
+<span class="k">del</span> <span class="n">show_graph2</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="github">
-<h2>Github で実験資料が更新された場合の対処<a class="headerlink" href="#github" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Github で実験資料が更新された場合の対処（うまく動かない）<a class="headerlink" href="#github" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>github では課題資料の更新がしばしば行われます．
 そのため，以下のコマンドを git レポジトリ上で実行して適宜，更新を行ってください．</p>
+<ul class="simple">
+<li>課題1 の場合</li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git pull https://github.com/UECMediaExp/Kadai1Shouno master
+</pre></div>
+</div>
 <ul class="simple">
 <li>課題2 の場合</li>
 </ul>
