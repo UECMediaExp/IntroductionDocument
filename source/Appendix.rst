@@ -30,6 +30,24 @@ MNIST を大学でダウンロードする場合には， proxy を設定する�
 `資料 PDF <20190122.pdf>`_
 
 
+Github で実験資料が更新された場合の対処
+---------------------------------------------------------------------
+
+github では課題資料の更新がしばしば行われます．
+そのため，以下のコマンドを git レポジトリ上で実行して適宜，更新を行ってください．
+
+* 課題2 の場合
+  
+.. code-block:: sh
+
+    git pull https://github.com/UECMediaExp/Kadai2 master
+
+
+* 課題3 の場合                
+
+.. code-block:: sh
+
+    git pull https://github.com/UECMediaExp/Kadai3 master
 
 
 
@@ -45,5 +63,9 @@ https://www.cc.uec.ac.jp/ug/ja/remote/vpn/
 * proxy.uec.ac.jp:8080
 
 * 172.21.0.0/16
+
+* *ied.inf.uec.ac.jp
+
+* *ced.cei.uec.ac.jp
 
 
