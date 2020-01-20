@@ -7,20 +7,20 @@
 
 課題は github classroom から提供されます．
 
-https://classroom.github.com/a/ga_vFQBu
+https://classroom.github.com/a/UeLJYqjW
 
 を踏んでください．
 
-自分の学籍番号がのリストが出ますので，自分の学籍番号をクリックして
+*自分の学籍番号がのリスト* が出ますので，自分の学籍番号をクリックして
 自分の github アカウントへリポジトリをクローンしてください．
 
-もし間違った学籍番号を推してしまった場合や，キャンセルボタンを押して
-不完全なリポジトリを作ってしまった場合は，TA もしくは庄野まで
+もし間違った学籍番号を推してしまった場合や，
+キャンセルボタンを押して不完全なリポジトリを作ってしまった場合は，TA もしくは庄野まで
 連絡してください．
 リポジトリを削除します．
 
 
-ここまでで，各自の github アカウント上に，``2018ML-Q1-githubのID`` という
+ここまでで，各自の github アカウント上に，`2019ML-Q1-githubのID`` という
 リポジトリが作成されていると思います．
 
 
@@ -28,9 +28,9 @@ https://classroom.github.com/a/ga_vFQBu
 --------------------------------------------
 
 次に，作業を行うため，github 上のリポジトリを CED のローカルマシンにクローンします．
-場所は，準備のところで述べたように ``notebook`` ディレクトリの下に無いと jupyterhub が
+場所は，準備のところで述べたように `notebook` ディレクトリの下に無いと jupyterhub が
 読み込めませんので注意してください．
-クローンには，github の ``clone or download`` ボタンを押して URL を取得後，
+クローンには，github の `clone or download` ボタンを押して URL を取得後，
 端末で，
 
 .. code-block:: sh
@@ -38,7 +38,7 @@ https://classroom.github.com/a/ga_vFQBu
     $ cd ~/notebook
     $ git clone 取得したURL
 
-で取得します．ディレクトリは notebook より下であれば，jupyterhub は読めますので，
+で取得します．ディレクトリは `notebook` の下であれば，jupyterhub は読めますので，
 適宜ディレクトリをほってもらってもOKです．
 また，クローンには，大学内の場合は，Clone with https の方が良いでしょう．
 
@@ -46,11 +46,11 @@ https://classroom.github.com/a/ga_vFQBu
 README.md の修正
 --------------------------------------------
 
-最初に行う作業は，ブランチの作成と ``README.md`` の修正です．
+最初に行う作業は，ブランチの作成と `README.md` の修正です．
 まず，作業ブランチを切ってください．名前は適当でよいですが
-この場合は WorkInProgress などで良いです．
+この場合は WorkInProgress (WIP) などで良いです．
 
-次に ``README.md`` の修正ですが，これは
+次に `README.md` の修正ですが，これは
 
 * 学籍番号
 
@@ -73,24 +73,24 @@ README.md の修正
 --------------------------------------------
 
 課題1 は，MNIST と呼ばれる数字データの識別実験を多層パーセプトロン(MLP)で行います．
-各リポジトリ内にある， ``Question.ipynb`` というファイルに課題を解いて出してください．
+各リポジトリ内にある， `Question.ipynb` というファイルに課題を解いて出してください．
 
 なお，課題を解くにあたり，演習を５題用意しました．
 
-  * ``01.Regression1.ipynb`` １変数の回帰問題（最小二乗法）
+  * `01.Regression1.ipynb` １変数の回帰問題（最小二乗法）
 
-  * ``02.Classification1.ipynb`` 1変数の識別問題（ロジスティック回帰）
+  * `02.Classification1.ipynb` 1変数の識別問題（ロジスティック回帰）
 
-  * ``03.Classification2.ipynb`` 2変数の識別問題（ロジスティック回帰）
+  * `03.Classification2.ipynb` 2変数の識別問題（ロジスティック回帰）
 
-  * ``04.Classification3.ipynb`` 2変数の識別問題（MLP）
+  * `04.Classification3.ipynb` 2変数の識別問題（MLP）
 
-  * ``05.MNIST.ipynb`` MNISTデータセットのロジスティック回帰による識別
+  * `05.MNIST.ipynb` MNISTデータセットのロジスティック回帰による識別
 
-が演習にあたります．課題１は， ``05.MNIST.ipynb`` と ``04.Classification.ipynb``
+が演習にあたります．課題１は， `05.MNIST.ipynb` と `04.Classification.ipynb`
 とを解くことによって，これらの組み合わせをつかうことで解くことが可能になります．
 
-演習の解答例は ``PracticeHint`` の中にあります．
+演習の解答例は `PracticeHint` の中にあります．
 
 
 適宜 `git add`, `git commit` および `git push` を行ってください．
@@ -101,5 +101,5 @@ README.md の修正
   おこなうこと．commit メッセージは演習おわりとでも書いておけばよいです．
   したがって，課題が終了する時点で，最低でも６回(演習５回＋課題１回)は commit が行われていることになるはずです．
 
-* その日の作業を終了した場合は，`git add` と `git commit` および `git push` の作業を行ってください．
+* その日の作業を終了する場合は，たとえ作業途中でも `git add` と `git commit` および `git push` の作業を行ってください．
 

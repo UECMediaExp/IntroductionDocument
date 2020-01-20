@@ -17,32 +17,37 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="検索" href="search.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="課題３ 深層学習その２" href="Q3.html" />
+    <link rel="prev" title="課題１ 多層パーセプトロンによるパターン識別" href="Q1.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -77,9 +82,17 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Environment.html">実験環境の解説</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Q1.html">課題１ 多層パーセプトロンによるパターン識別</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">課題２ Keras を用いた深層学習</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#github">課題2の github 上でのクローン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">リポジトリのローカルへのクローン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#readme-md">README.md の修正</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">課題2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Q3.html">課題３ 深層学習その２</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Appendix.html">追加情報</a></li>
 </ul>
 
@@ -150,14 +163,14 @@
 <div class="section" id="github">
 <h2>課題2の github 上でのクローン<a class="headerlink" href="#github" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>課題は github classroom から提供されます．</p>
-<p><a class="reference external" href="https://classroom.github.com/a/IVMIPhDy">https://classroom.github.com/a/IVMIPhDy</a></p>
+<p><a class="reference external" href="https://classroom.github.com/a/cFwtxJz9">https://classroom.github.com/a/cFwtxJz9</a></p>
 <p>を踏んでください．</p>
 <p>自分の学籍番号がのリストが出ますので，自分の学籍番号をクリックして
 自分の github アカウントへリポジトリをクローンしてください．</p>
 <p>もし間違った学籍番号を推してしまった場合や，キャンセルボタンを押して
 不完全なリポジトリを作ってしまった場合は，TA まで連絡してください．
 リポジトリを削除します．</p>
-<p>ここまでで，各自の github アカウント上に，<code class="docutils literal notranslate"><span class="pre">2018ML-Q2-githubのID</span></code> という
+<p>ここまでで，各自の github アカウント上に，<cite>2019ML-Q2-githubのID</cite> という
 リポジトリが作成されていると思います．</p>
 </div>
 <div class="section" id="id1">
@@ -173,7 +186,7 @@
 <p>課題2 は，Github に内包される Jupyter notebook を実行するという体でで
 実施を行ってください．課題に関しても notebook の内に記載してあります．</p>
 <ul class="simple">
-<li>その日の作業を終了した場合は，<cite>git add</cite> と <cite>git commit</cite> および <cite>git push</cite> の作業を行ってください．</li>
+<li><p>その日の作業を終了した場合は， <cite>git add</cite> と <cite>git commit</cite> および <cite>git push</cite> の作業を行ってください．</p></li>
 </ul>
 </div>
 </div>
@@ -183,6 +196,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Q3.html" class="btn btn-neutral float-right" title="課題３ 深層学習その２" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Q1.html" class="btn btn-neutral float-left" title="課題１ 多層パーセプトロンによるパターン識別" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -206,37 +228,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'./',
-              VERSION:'',
-              LANGUAGE:'ja',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/translations.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -7,7 +7,7 @@
 
 課題は github classroom から提供されます．
 
-https://classroom.github.com/a/RFjYZIIt
+https://classroom.github.com/a/ViDEqQPD
 
 を踏んで自分の github アカウントへリポジトリをクローンしてください．
 
@@ -17,7 +17,7 @@ https://classroom.github.com/a/RFjYZIIt
 リポジトリを削除します．
 
 
-ここまでで，各自の github アカウント上に，``2018ML-Q1-githubのID`` という
+ここまでで，各自の github アカウント上に，``2019ML-Q3-githubのID`` という
 リポジトリが作成されていると思います．
 
 
@@ -25,6 +25,7 @@ https://classroom.github.com/a/RFjYZIIt
 --------------------------------------------
 
 ここは課題１と同様です．
+
 
 README.md の修正
 --------------------------------------------

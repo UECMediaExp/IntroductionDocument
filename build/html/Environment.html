@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
     <link rel="next" title="課題１ 多層パーセプトロンによるパターン識別" href="Q1.html" />
     <link rel="prev" title="メディア情報学実験（機械学習/パターン認識）" href="index.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -87,6 +90,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Q1.html">課題１ 多層パーセプトロンによるパターン識別</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Q2.html">課題２ Keras を用いた深層学習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Q3.html">課題３ 深層学習その２</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Appendix.html">追加情報</a></li>
 </ul>
 
@@ -161,11 +166,11 @@
 そのための環境は <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code> を用います．
 前期のプログラミング言語実験 python で行った環境とほぼ一緒です．</p>
 <p>ちょっと違うのは Jupyter を提供してくれるのが計算機サーバになっている点で
-GPU も使えます．このため JupyterHub と呼ばれる，サービスにアクセスします．</p>
+GPU も使えます．このため CED の GPU サーバーをホストとして JupyterHub と呼ばれるサービスにアクセスします．</p>
 <p>CED で JupyterHub を使うためには，まず，Jupyter のノートの保管場所を作る必要があります．
-これは，各アカウントホームディレクトリ下にある．<code class="docutils literal notranslate"><span class="pre">~/notebook</span></code> フォルダが指定されています．</p>
-<p>まず <code class="docutils literal notranslate"><span class="pre">sol.edu.cc.uec.ac.jp</span></code> へログインして，<code class="docutils literal notranslate"><span class="pre">IED_HOME</span></code> の下に
-notebook ディレクトリを作ります．</p>
+これは，各アカウントホームディレクトリ下にある． <cite>~/notebook</cite> フォルダが指定されています．</p>
+<p>まず <code class="docutils literal notranslate"><span class="pre">sol.edu.cc.uec.ac.jp</span></code> へログインして， <cite>IED_HOME</cite> の下に
+<cite>notebook</cite> ディレクトリを作ります．</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ ssh sol.edu.cc.uec.ac.jp
 </pre></div>
 </div>
@@ -173,7 +178,7 @@ notebook ディレクトリを作ります．</p>
 $ mkdir notebook
 </pre></div>
 </div>
-<p>この時点で，<code class="docutils literal notranslate"><span class="pre">~/IED_HOME/notebook</span></code> が在るかを確認してください．
+<p>この時点で， <cite>~/IED_HOME/notebook</cite> が在るかを確認してください．
 次に CED で使えるようおまじないをかけておきます．</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ ln -s ~/IED_HOME/notebook ~/.ced_ubuntu/notebook
 </pre></div>
@@ -190,8 +195,8 @@ $ mkdir notebook
 <p><a class="reference external" href="http://gpu01.ced.cei.uec.ac.jp/">http://gpu01.ced.cei.uec.ac.jp/</a></p>
 <p>も活用してください．どちらも同じように利用可能です．</p>
 <p>ここで，GPU があいているサーバーを選びます．</p>
-<p>すると，Sing in ウィンドウが開きますので，ここで，
-大学のユーザー名とパスワードを入れてください．</p>
+<p>すると，Sign in ウィンドウが開きますので，ここで，
+大学アカウントのユーザー名とパスワードを入れてください．</p>
 <p>このとき，前述の <cite>notebook</cite> ディレクトリがないとエラーが起きます．</p>
 <p>適当に Jupyter notebook を作ると <cite>notebook</cite> ディレクトリにファイルができるので
 確認してください．</p>
@@ -214,7 +219,7 @@ github アカウントを作成してください(前期プログラミング言
         <a href="Q1.html" class="btn btn-neutral float-right" title="課題１ 多層パーセプトロンによるパターン識別" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="メディア情報学実験（機械学習/パターン認識）" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="メディア情報学実験（機械学習/パターン認識）" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -240,37 +245,16 @@ github アカウントを作成してください(前期プログラミング言
   
 
 
-  
-
-    
-    
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'./',
-              VERSION:'',
-              LANGUAGE:'ja',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/translations.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
