@@ -37,6 +37,12 @@ CED で JupyterHub を使うためには，まず，Jupyter のノートの保�
 
 これで Jupyter を使う準備が整いました．
 
+CED 標準の CentOS で計算作業をすることはないと思いますが，もしそのような状況になる場合は，
+
+   $ ln -s ~/IED_HOME/notebook ~/.ced_centos/notebook
+
+としておくと共通の `notebook` ディレクトリを使用できます．
+
 
 2. Jupyter による実験
 ------------------------------------------
