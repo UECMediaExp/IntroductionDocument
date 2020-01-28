@@ -20,12 +20,22 @@
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'ja',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
         <script type="text/javascript" src="_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -196,8 +206,8 @@ $ git clone 取得したURL
 この場合は WorkInProgress (WIP) などで良いです．</p>
 <p>次に <cite>README.md</cite> の修正ですが，これは</p>
 <ul class="simple">
-<li><p>学籍番号</p></li>
-<li><p>氏名</p></li>
+<li>学籍番号</li>
+<li>氏名</li>
 </ul>
 <p>の欄を適宜自分のものにかえて，この時点で， <cite>git add</cite>, <cite>git commit</cite>
 および <cite>git commit</cite> までの作業を行ってください．</p>
@@ -210,11 +220,11 @@ $ git clone 取得したURL
 <p>なお，課題を解くにあたり，演習を５題用意しました．</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><cite>01.Regression1.ipynb</cite> １変数の回帰問題（最小二乗法）</p></li>
-<li><p><cite>02.Classification1.ipynb</cite> 1変数の識別問題（ロジスティック回帰）</p></li>
-<li><p><cite>03.Classification2.ipynb</cite> 2変数の識別問題（ロジスティック回帰）</p></li>
-<li><p><cite>04.Classification3.ipynb</cite> 2変数の識別問題（MLP）</p></li>
-<li><p><cite>05.MNIST.ipynb</cite> MNISTデータセットのロジスティック回帰による識別</p></li>
+<li><cite>01.Regression1.ipynb</cite> １変数の回帰問題（最小二乗法）</li>
+<li><cite>02.Classification1.ipynb</cite> 1変数の識別問題（ロジスティック回帰）</li>
+<li><cite>03.Classification2.ipynb</cite> 2変数の識別問題（ロジスティック回帰）</li>
+<li><cite>04.Classification3.ipynb</cite> 2変数の識別問題（MLP）</li>
+<li><cite>05.MNIST.ipynb</cite> MNISTデータセットのロジスティック回帰による識別</li>
 </ul>
 </div></blockquote>
 <p>が演習にあたります．課題１は， <cite>05.MNIST.ipynb</cite> と <cite>04.Classification.ipynb</cite>
@@ -224,10 +234,10 @@ $ git clone 取得したURL
 以下の時点での登録は必須事項とします．
 この点について提出が守られていないものに関しては <em>減点対象</em> とします．</p>
 <ul class="simple">
-<li><p>各演習を終わらせた段階で，その都度 <cite>git add</cite>, <cite>git commit</cite>, <cite>git push</cite> までを
+<li>各演習を終わらせた段階で，その都度 <cite>git add</cite>, <cite>git commit</cite>, <cite>git push</cite> までを
 おこなうこと．commit メッセージは演習おわりとでも書いておけばよいです．
-したがって，課題が終了する時点で，最低でも６回(演習５回＋課題１回)は commit が行われていることになるはずです．</p></li>
-<li><p>その日の作業を終了する場合は，たとえ作業途中でも <cite>git add</cite> と <cite>git commit</cite> および <cite>git push</cite> の作業を行ってください．</p></li>
+したがって，課題が終了する時点で，最低でも６回(演習５回＋課題１回)は commit が行われていることになるはずです．</li>
+<li>その日の作業を終了する場合は，たとえ作業途中でも <cite>git add</cite> と <cite>git commit</cite> および <cite>git push</cite> の作業を行ってください．</li>
 </ul>
 </div>
 </div>

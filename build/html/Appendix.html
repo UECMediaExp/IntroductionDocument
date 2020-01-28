@@ -20,12 +20,22 @@
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'ja',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
         <script type="text/javascript" src="_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -89,7 +99,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">追加情報</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#mnist">演習1-5 の MNIST　データセットダウンロード</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">2020/01/20 の資料</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ced-gpu">学外からの CED の GPU サーバーアクセス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ied-ced-gpu">IED/CED の GPU サーバーアクセス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gpu">学外からの GPU サーバーアクセス</a></li>
 </ul>
 </li>
 </ul>
@@ -173,19 +184,27 @@
 <div class="section" id="id2">
 <h2>2020/01/20 の資料<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>下記から資料をダウンロードできるはずです．</p>
-<p><a class="reference external" href="20200121.pdf">資料 PDF</a></p>
+<p><a class="reference external" href="2020121.pdf">資料 PDF</a></p>
 </div>
-<div class="section" id="ced-gpu">
-<h2>学外からの CED の GPU サーバーアクセス<a class="headerlink" href="#ced-gpu" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>VPN サーバーを用いる（基盤センターのVPNの項を参照）</p>
-<p><a class="reference external" href="https://www.cc.uec.ac.jp/ug/ja/remote/vpn/">https://www.cc.uec.ac.jp/ug/ja/remote/vpn/</a></p>
+<div class="section" id="ied-ced-gpu">
+<h2>IED/CED の GPU サーバーアクセス<a class="headerlink" href="#ied-ced-gpu" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>ただし，proxy の除外リストに以下をいれて，除外しておくこと</p>
 <ul class="simple">
-<li><p><cite>proxy.uec.ac.jp:8080</cite></p></li>
-<li><p><cite>172.21.0.0/16</cite></p></li>
-<li><p><cite>*ied.inf.uec.ac.jp</cite></p></li>
-<li><p><cite>*ced.cei.uec.ac.jp</cite></p></li>
+<li><cite>proxy.uec.ac.jp:8080</cite></li>
+<li><cite>172.21.0.0/16</cite></li>
+<li><cite>*ied.inf.uec.ac.jp</cite></li>
+<li><cite>*ced.cei.uec.ac.jp</cite></li>
 </ul>
+<p>面倒であれば，学内の ホストは proxy を使わないという</p>
+<ul class="simple">
+<li><cite>*uec.ac.jp</cite></li>
+</ul>
+<p>を入れるでもOKです．</p>
+</div>
+<div class="section" id="gpu">
+<h2>学外からの GPU サーバーアクセス<a class="headerlink" href="#gpu" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>VPN サーバーを用いる（基盤センターのVPNの項を参照）とできる（はず）です．</p>
+<p><a class="reference external" href="https://www.cc.uec.ac.jp/ug/ja/remote/vpn/">https://www.cc.uec.ac.jp/ug/ja/remote/vpn/</a></p>
 </div>
 </div>
 
