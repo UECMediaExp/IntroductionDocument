@@ -17,46 +17,34 @@
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'./',
-              VERSION:'',
-              LANGUAGE:'ja',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/translations.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
 
+  
+  
     
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
     <link rel="prev" title="課題３ 深層学習その２" href="Q3.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -101,6 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#id2">2020/01/20 の資料</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ied-ced-gpu">IED/CED の GPU サーバーアクセス</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gpu">学外からの GPU サーバーアクセス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#errta">Errta</a></li>
 </ul>
 </li>
 </ul>
@@ -206,6 +195,30 @@
 <p>VPN サーバーを用いる（基盤センターのVPNの項を参照）とできる（はず）です．</p>
 <p><a class="reference external" href="https://www.cc.uec.ac.jp/ug/ja/remote/vpn/">https://www.cc.uec.ac.jp/ug/ja/remote/vpn/</a></p>
 </div>
+<div class="section" id="errta">
+<h2>Errta<a class="headerlink" href="#errta" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>課題３−３</p>
+<p>セルに余計な i が入っているのでとってください．</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
+    <span class="n">inputs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">inputs</span><span class="p">,</span><span class="n">start</span><span class="o">+</span><span class="n">step</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>のようになっていますが， <cite>i</cite> は未定義変数なので，</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
+    <span class="n">inputs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">inputs</span><span class="p">,</span><span class="n">start</span><span class="o">+</span><span class="n">step</span><span class="o">*</span><span class="n">j</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>とするのが正解です．</p>
+<p>課題３−３</p>
+<p>H264符号化による動画ファイル(MP4)の作成コマンドが，うまく行かない場合は
+webM フォーマットを試してみてください．</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>!ffmpeg -y -framerate <span class="m">15</span> -i result/gan1/img_%04d.png -vcodec libx264 -pix_fmt yuv420p -r <span class="m">60</span> result/gan1/gan_movie.mp4
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>!/usr/local/anaconda3/bin/ffmpeg -y -framerate <span class="m">15</span> -i result/gan1/img_%04d.png -vcodec vp8 -r <span class="m">60</span> result/gan1/gan_movie.webm
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -217,7 +230,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="Q3.html" class="btn btn-neutral float-left" title="課題３ 深層学習その２" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Q3.html" class="btn btn-neutral" title="課題３ 深層学習その２" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -226,7 +239,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Hayaru Shouno
+        &copy; Copyright 2019, Hayaru Shouno.
 
     </p>
   </div>
@@ -243,16 +256,37 @@
   
 
 
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            LANGUAGE:'ja',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

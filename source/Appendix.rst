@@ -57,3 +57,37 @@ VPN サーバーを用いる（基盤センターのVPNの項を参照）とで�
 
 https://www.cc.uec.ac.jp/ug/ja/remote/vpn/
 
+
+Errta
+---------------------------------------------------------------------   
+課題３−３
+
+セルに余計な i が入っているのでとってください．
+
+.. code-block:: python
+
+  for j in range(steps):
+      inputs = np.vstack((inputs,start+step*(i+j)))
+
+のようになっていますが， `i` は未定義変数なので，
+
+.. code-block:: python
+
+  for j in range(steps):
+      inputs = np.vstack((inputs,start+step*j))
+
+とするのが正解です．      
+      
+
+課題３−３
+      
+H264符号化による動画ファイル(MP4)の作成コマンドが，うまく行かない場合は
+webM フォーマットを試してみてください．
+
+.. code-block:: bash
+
+   !ffmpeg -y -framerate 15 -i result/gan1/img_%04d.png -vcodec libx264 -pix_fmt yuv420p -r 60 result/gan1/gan_movie.mp4
+
+.. code-block:: bash
+
+   !/usr/local/anaconda3/bin/ffmpeg -y -framerate 15 -i result/gan1/img_%04d.png -vcodec vp8 -r 60 result/gan1/gan_movie.webm
