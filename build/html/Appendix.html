@@ -17,34 +17,46 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'ja',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
     <link rel="prev" title="課題３ 深層学習その２" href="Q3.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -89,7 +101,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#id2">2020/01/20 の資料</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ied-ced-gpu">IED/CED の GPU サーバーアクセス</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gpu">学外からの GPU サーバーアクセス</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#errta">Errta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#errta">Errta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">課題２</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">課題３−３</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">課題３−３</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -178,12 +195,12 @@
 <div class="section" id="ied-ced-gpu">
 <h2>IED/CED の GPU サーバーアクセス<a class="headerlink" href="#ied-ced-gpu" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>ただし，proxy の除外リストに以下をいれて，除外しておくこと</p>
-<ul class="simple">
-<li><cite>proxy.uec.ac.jp:8080</cite></li>
-<li><cite>172.21.0.0/16</cite></li>
-<li><cite>*ied.inf.uec.ac.jp</cite></li>
-<li><cite>*ced.cei.uec.ac.jp</cite></li>
-</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">`</span>proxy.uec.ac.jp:8080<span class="sb">`</span>
+<span class="sb">`</span><span class="m">172</span>.21.0.0/16<span class="sb">`</span>
+<span class="sb">`</span>*ied.inf.uec.ac.jp<span class="sb">`</span>
+<span class="sb">`</span>*ced.cei.uec.ac.jp<span class="sb">`</span>
+</pre></div>
+</div>
 <p>面倒であれば，学内の ホストは proxy を使わないという</p>
 <ul class="simple">
 <li><cite>*uec.ac.jp</cite></li>
@@ -197,7 +214,21 @@
 </div>
 <div class="section" id="errta">
 <h2>Errta<a class="headerlink" href="#errta" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>課題３−３</p>
+<div class="section" id="id3">
+<h3>課題２<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>画像データセットのような大きなファイルをリポジトリに含めると（拡張子が <cite>.h5</cite> のようなファイル）
+Github が拒否するケースがあります．この場合は <cite>*.h5</cite> のファイルをリポジトリの追跡リストから外してください．
+<cite>git add</cite> で追加しなければ大丈夫ですが，既に追加してしまった場合は，</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git rm --cached ファイル名
+</pre></div>
+</div>
+<p>とかで， <cite>*.h5</cite> なファイルを外してあげてください．
+あとは <cite>git add</cite> で <cite>*.h5</cite> なファイルを追加しなければよいのですが，たぶん <cite>git</cite> はおせっかいに
+<cite>*.h5</cite> なファイルが add していないよというメッセージを出してくるかと思います．
+このメッセージを見たくなければ git の管理ファイルである <cite>.gitignore</cite> というファイルに <cite>*.h5</cite> という記述をしてあげてください．</p>
+</div>
+<div class="section" id="id4">
+<h3>課題３−３<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>セルに余計な i が入っているのでとってください．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
     <span class="n">inputs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">inputs</span><span class="p">,</span><span class="n">start</span><span class="o">+</span><span class="n">step</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)))</span>
@@ -209,14 +240,20 @@
 </pre></div>
 </div>
 <p>とするのが正解です．</p>
-<p>課題３−３</p>
+</div>
+<div class="section" id="id5">
+<h3>課題３−３<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>H264符号化による動画ファイル(MP4)の作成コマンドが，うまく行かない場合は
 webM フォーマットを試してみてください．</p>
+<p>課題のサンプルコードでは， <cite>libx264</cite> エンコーダを用いていますが，この部分を</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>!ffmpeg -y -framerate <span class="m">15</span> -i result/gan1/img_%04d.png -vcodec libx264 -pix_fmt yuv420p -r <span class="m">60</span> result/gan1/gan_movie.mp4
 </pre></div>
 </div>
+<p><cite>vp8</cite> エンコーダに変えてください．</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>!/usr/local/anaconda3/bin/ffmpeg -y -framerate <span class="m">15</span> -i result/gan1/img_%04d.png -vcodec vp8 -r <span class="m">60</span> result/gan1/gan_movie.webm
 </pre></div>
+</div>
+<p>で，WebM フォーマットになるはずで，firefox 標準で再生される（ハズ）です．</p>
 </div>
 </div>
 </div>
@@ -230,7 +267,7 @@ webM フォーマットを試してみてください．</p>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="Q3.html" class="btn btn-neutral" title="課題３ 深層学習その２" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Q3.html" class="btn btn-neutral float-left" title="課題３ 深層学習その２" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -239,7 +276,7 @@ webM フォーマットを試してみてください．</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Hayaru Shouno.
+        &copy; Copyright 2019, Hayaru Shouno
 
     </p>
   </div>
@@ -256,37 +293,16 @@ webM フォーマットを試してみてください．</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            LANGUAGE:'ja',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/language_data.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
