@@ -20,7 +20,7 @@ https://classroom.github.com/a/UeLJYqjW
 リポジトリを削除します．
 
 
-ここまでで，各自の github アカウント上に，`2019ML-Q1-githubのID`` という
+ここまでで，各自の github アカウント上に，`2019ML-Q1-githubのID` という
 リポジトリが作成されていると思います．
 
 
