@@ -1,49 +1,42 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<html class="writer-html5" lang="ja" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>追加情報 &mdash; Media Experiment Machine Learning / Computer Vision  ドキュメント</title>
   
 
   
-  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'./',
-              VERSION:'',
-              LANGUAGE:'ja',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/translations.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
     <link rel="prev" title="課題３ 深層学習その２" href="Q3.html" /> 
@@ -83,6 +76,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -98,15 +92,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Q3.html">課題３ 深層学習その２</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">追加情報</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#mnist">演習1-5 の MNIST　データセットダウンロード</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">2020/01/20 の資料</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ied-ced-gpu">IED/CED の GPU サーバーアクセス</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gpu">学外からの GPU サーバーアクセス</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#errta">Errta</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">課題２</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">課題３−３</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">課題３−３</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#github">Github 保存の除外ファイルについて</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#errta">Errta</a></li>
 </ul>
 </li>
 </ul>
@@ -114,6 +101,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -148,18 +136,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>追加情報</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/Appendix.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -185,76 +175,18 @@
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;https_proxy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://proxy.uec.ac.jp:8080/&#39;</span>
 </pre></div>
 </div>
-<p>なお，CED と IED でダウンロードすると，両方のハードディスクにデータセットの <em>ファイルが残る</em> 場合あるので注意が必要です．</p>
+<p>なお，CED と IED でダウンロードすると，両方のハードディスクにデータセットの <em>ファイルが残る</em> 場合があるので注意が必要です．</p>
 </div>
-<div class="section" id="id2">
-<h2>2020/01/20 の資料<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>下記から資料をダウンロードできるはずです．</p>
-<p><a class="reference external" href="2020121.pdf">資料 PDF</a></p>
-</div>
-<div class="section" id="ied-ced-gpu">
-<h2>IED/CED の GPU サーバーアクセス<a class="headerlink" href="#ied-ced-gpu" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>ただし，proxy の除外リストに以下をいれて，除外しておくこと</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">`</span>proxy.uec.ac.jp:8080<span class="sb">`</span>
-<span class="sb">`</span><span class="m">172</span>.21.0.0/16<span class="sb">`</span>
-<span class="sb">`</span>*ied.inf.uec.ac.jp<span class="sb">`</span>
-<span class="sb">`</span>*ced.cei.uec.ac.jp<span class="sb">`</span>
-</pre></div>
-</div>
-<p>面倒であれば，学内の ホストは proxy を使わないという</p>
-<ul class="simple">
-<li><cite>*uec.ac.jp</cite></li>
-</ul>
-<p>を入れるでもOKです．</p>
-</div>
-<div class="section" id="gpu">
-<h2>学外からの GPU サーバーアクセス<a class="headerlink" href="#gpu" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>VPN サーバーを用いる（基盤センターのVPNの項を参照）とできる（はず）です．</p>
-<p><a class="reference external" href="https://www.cc.uec.ac.jp/ug/ja/remote/vpn/">https://www.cc.uec.ac.jp/ug/ja/remote/vpn/</a></p>
+<div class="section" id="github">
+<h2>Github 保存の除外ファイルについて<a class="headerlink" href="#github" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Github は，巨大なデータを保存するのに向いていないため，この実験では，
+アップロードするファイル群を制限しています．
+<cite>.gitignore</cite> にあるように <cite>python</cite> や <cite>Jupyter</cite> 実行時の１次的なファイルや
+結果をまとめた <cite>.h5</cite> と呼ばれるデータベースファイルは除外しています．
+もし，必要であれば各自でダウンロードしてください．</p>
 </div>
 <div class="section" id="errta">
 <h2>Errta<a class="headerlink" href="#errta" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<div class="section" id="id3">
-<h3>課題２<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>画像データセットのような大きなファイルをリポジトリに含めると（拡張子が <cite>.h5</cite> のようなファイル）
-Github が拒否するケースがあります．この場合は <cite>*.h5</cite> のファイルをリポジトリの追跡リストから外してください．
-<cite>git add</cite> で追加しなければ大丈夫ですが，既に追加してしまった場合は，</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git rm --cached ファイル名
-</pre></div>
-</div>
-<p>とかで， <cite>*.h5</cite> なファイルを外してあげてください．
-あとは <cite>git add</cite> で <cite>*.h5</cite> なファイルを追加しなければよいのですが，たぶん <cite>git</cite> はおせっかいに
-<cite>*.h5</cite> なファイルが add していないよというメッセージを出してくるかと思います．
-このメッセージを見たくなければ git の管理ファイルである <cite>.gitignore</cite> というファイルに <cite>*.h5</cite> という記述をしてあげてください．</p>
-</div>
-<div class="section" id="id4">
-<h3>課題３−３<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>セルに余計な i が入っているのでとってください．</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
-    <span class="n">inputs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">inputs</span><span class="p">,</span><span class="n">start</span><span class="o">+</span><span class="n">step</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)))</span>
-</pre></div>
-</div>
-<p>のようになっていますが， <cite>i</cite> は未定義変数なので，</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
-    <span class="n">inputs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">inputs</span><span class="p">,</span><span class="n">start</span><span class="o">+</span><span class="n">step</span><span class="o">*</span><span class="n">j</span><span class="p">))</span>
-</pre></div>
-</div>
-<p>とするのが正解です．</p>
-</div>
-<div class="section" id="id5">
-<h3>課題３−３<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>H264符号化による動画ファイル(MP4)の作成コマンドが，うまく行かない場合は
-webM フォーマットを試してみてください．</p>
-<p>課題のサンプルコードでは， <cite>libx264</cite> エンコーダを用いていますが，この部分を</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>!ffmpeg -y -framerate <span class="m">15</span> -i result/gan1/img_%04d.png -vcodec libx264 -pix_fmt yuv420p -r <span class="m">60</span> result/gan1/gan_movie.mp4
-</pre></div>
-</div>
-<p><cite>vp8</cite> エンコーダに変えてください．</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>!/usr/local/anaconda3/bin/ffmpeg -y -framerate <span class="m">15</span> -i result/gan1/img_%04d.png -vcodec vp8 -r <span class="m">60</span> result/gan1/gan_movie.webm
-</pre></div>
-</div>
-<p>で，WebM フォーマットになるはずで，firefox 標準で再生される（ハズ）です．</p>
-</div>
 </div>
 </div>
 
@@ -263,27 +195,28 @@ webM フォーマットを試してみてください．</p>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="Q3.html" class="btn btn-neutral float-left" title="課題３ 深層学習その２" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="Q3.html" class="btn btn-neutral float-left" title="課題３ 深層学習その２" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Hayaru Shouno
+        &#169; Copyright 2020, Keiji Yanai/Hayaru Shouno.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -291,7 +224,6 @@ webM フォーマットを試してみてください．</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

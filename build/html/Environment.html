@@ -1,49 +1,42 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<html class="writer-html5" lang="ja" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>実験環境の解説 &mdash; Media Experiment Machine Learning / Computer Vision  ドキュメント</title>
   
 
   
-  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'./',
-              VERSION:'',
-              LANGUAGE:'ja',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/translations.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
     <link rel="next" title="課題１ 多層パーセプトロンによるパターン識別" href="Q1.html" />
@@ -84,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -94,9 +88,14 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">実験環境の解説</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cedjupyterhub">1. CEDでJupyterHub を使うための準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uec-vpn">1. UEC VPN 環境の準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ied-cedjupyterhub">1. IED/CEDでJupyterHub を使うための準備</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#jupyter">2. Jupyter による実験</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#github">3. Github との接続</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github">3. Github との接続</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">ユーザー名の設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#proxy">Proxyの設定</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Q1.html">課題１ 多層パーセプトロンによるパターン識別</a></li>
@@ -108,6 +107,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -142,18 +142,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>実験環境の解説</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/Environment.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -169,35 +171,53 @@
             
   <div class="section" id="id1">
 <h1>実験環境の解説<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<div class="section" id="cedjupyterhub">
-<h2>1. CEDでJupyterHub を使うための準備<a class="headerlink" href="#cedjupyterhub" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>まず，CED の端末へログインしてください．
-この実験では，Webブラウザを介して <code class="docutils literal notranslate"><span class="pre">pyton</span></code> での実験を行います．
+<div class="section" id="uec-vpn">
+<h2>1. UEC VPN 環境の準備<a class="headerlink" href="#uec-vpn" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>この実験では，IED/CED の GPU マシンを使います．
+(Google Colab とかでも演習はできると思いますが，Colab は使うほど遅いTPUに割り当てられる傾向が見れるので
+無料使用の枠での実行はお勧めしません)</p>
+<p>IED/CEDにつなぐには大学側のネットワークにホストを入れておく必要があります．
+このため大学側と Virtual Private Network (VPN) を形成する必要があります．
+IED/CED の計算機で作業する場合は必要ないですが，自宅などから繋いで演習実験を
+行う場合は必須ですので情報基盤センターの指示にしたがって VPN を構築する必要があります．
+詳細は下記を参照してください．</p>
+<p><a class="reference external" href="https://www.cc.uec.ac.jp/ug/ja/remote/vpn/index.html">https://www.cc.uec.ac.jp/ug/ja/remote/vpn/index.html</a></p>
+<p>なお，前期のプログラミング言語実験でやったように，
+トンネルを掘って IED のホストそのものをGUIとして使うことは
+必須ではなく，Web ブラウザと端末ソフトウェアがあれば，実験遂行は可能です．</p>
+</div>
+<div class="section" id="ied-cedjupyterhub">
+<h2>1. IED/CEDでJupyterHub を使うための準備<a class="headerlink" href="#ied-cedjupyterhub" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>この実験では，Webブラウザを介して <code class="docutils literal notranslate"><span class="pre">python</span></code> での実験を行います．
 そのための環境は <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code> を用います．
 前期のプログラミング言語実験 python で行った環境とほぼ一緒です．</p>
 <p>ちょっと違うのは Jupyter を提供してくれるのが計算機サーバになっている点で
 GPU も使えます．このため CED の GPU サーバーをホストとして JupyterHub と呼ばれるサービスにアクセスします．</p>
-<p>CED で JupyterHub を使うためには，まず，Jupyter のノートの保管場所を作る必要があります．
+<p>IED/CED で JupyterHub を使うためには，まず，Jupyter のノートの保管場所を作る必要があります．
 これは，各アカウントホームディレクトリ下にある． <cite>~/notebook</cite> フォルダが指定されています．</p>
 <p>まず <code class="docutils literal notranslate"><span class="pre">sol.edu.cc.uec.ac.jp</span></code> へログインして， <cite>IED_HOME</cite> の下に
 <cite>notebook</cite> ディレクトリを作ります．</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ ssh sol.edu.cc.uec.ac.jp
 </pre></div>
 </div>
+<p>この時点で， <cite>~/IED_HOME/notebook</cite> が在るかを確認してください．
+なければ，</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> IED_HOME
 $ mkdir notebook
 </pre></div>
 </div>
-<p>この時点で， <cite>~/IED_HOME/notebook</cite> が在るかを確認してください．
-次に CED で使えるようおまじないをかけておきます．</p>
+<p>のようにして，空のディレクトリを作ってもらえるようにしてもらえればOKです．
+次に CED 側の GPU でも使えるようおまじないをかけておきます．
+（CED側のホストで，<cite>notebook</cite> ディレクトリが所定位置に見えるように細工をしています）</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ ln -s ~/IED_HOME/notebook ~/.ced_ubuntu/notebook
 </pre></div>
 </div>
 <p>これで Jupyter を使う準備が整いました．</p>
 <p>CED 標準の CentOS で計算作業をすることはないと思いますが，もしそのような状況になる場合は，</p>
 <blockquote>
-<div>$ ln -s ~/IED_HOME/notebook ~/.ced_centos/notebook</div></blockquote>
-<p>としておくと共通の <cite>notebook</cite> ディレクトリを使用できます．</p>
+<div><p>$ ln -s ~/IED_HOME/notebook ~/.ced_centos/notebook</p>
+</div></blockquote>
+<p>としておくと共通の <cite>notebook</cite> ディレクトリを使用できます．(<cite>.ced_ubuntu</cite> と <cite>.ced_cenntos</cite>) の部分が違います．</p>
 </div>
 <div class="section" id="jupyter">
 <h2>2. Jupyter による実験<a class="headerlink" href="#jupyter" title="このヘッドラインへのパーマリンク">¶</a></h2>
@@ -208,7 +228,8 @@ $ mkdir notebook
 <p>CEDの34個のGPU (1GPUサーバ * 34台(ただし2台故障中))</p>
 <p><a class="reference external" href="http://gpu01.ced.cei.uec.ac.jp/">http://gpu01.ced.cei.uec.ac.jp/</a></p>
 <p>も活用してください．どちらも同じように利用可能です．</p>
-<p>ここで，GPU があいているサーバーを選びます．</p>
+<p>繋げない場合は，VPN設定とプロキシ設定を確認してください．</p>
+<p>上手く繋げたら，ここで GPU があいているサーバーを選びます．</p>
 <p>すると，Sign in ウィンドウが開きますので，ここで，
 大学アカウントのユーザー名とパスワードを入れてください．</p>
 <p>このとき，前述の <cite>notebook</cite> ディレクトリがないとエラーが起きます．</p>
@@ -217,8 +238,28 @@ $ mkdir notebook
 </div>
 <div class="section" id="github">
 <h2>3. Github との接続<a class="headerlink" href="#github" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>課題１に関しては github から提供されます．
-github アカウントを作成してください(前期プログラミング言語実験 python) 参照</p>
+<p>課題に関しては github から提供されます．
+github アカウントを作成してください(前期プログラミング言語実験 python 参照)．</p>
+<p>Jupyter 側で <cite>Terminal</cite> を開くか，remote 環境で <cite>git</cite> の設定を行ってください．
+以下，プログラミング言語実験からの抜粋です．前期で IEDで設定した場合は
+そのまま引き継がれます．CED で使う場合は再度設定が必要かもしれません．</p>
+<div class="section" id="id2">
+<h3>ユーザー名の設定<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git config --global user.name <span class="s2">&quot;Hayaru SHOUNO&quot;</span>
+git config --global user.email <span class="s2">&quot;shouno@uec.ac.jp&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="proxy">
+<h3>Proxyの設定<a class="headerlink" href="#proxy" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>また大学の端末を使って作業する場合には，以下の proxy の設定も必要になってきます．
+proxy 関連は，学内から通信をする場合に多分必要です．
+(参照 <a class="reference external" href="https://www.cc.uec.ac.jp/ug/ja/network/proxy/proxy.html">https://www.cc.uec.ac.jp/ug/ja/network/proxy/proxy.html</a>)</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git config --global http.proxy http://proxy.uec.ac.jp:8080
+git config --global https.proxy http://proxy.uec.ac.jp:8080
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -227,29 +268,29 @@ github アカウントを作成してください(前期プログラミング言
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="Q1.html" class="btn btn-neutral float-right" title="課題１ 多層パーセプトロンによるパターン識別" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="index.html" class="btn btn-neutral float-left" title="メディア情報学実験（機械学習/パターン認識）" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="Q1.html" class="btn btn-neutral float-right" title="課題１ 多層パーセプトロンによるパターン識別" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="メディア情報学実験（機械学習/パターン認識）" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Hayaru Shouno
+        &#169; Copyright 2020, Keiji Yanai/Hayaru Shouno.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -257,7 +298,6 @@ github アカウントを作成してください(前期プログラミング言
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

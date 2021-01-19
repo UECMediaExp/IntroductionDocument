@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Media Experiment Machine Learning / Computer Vision'
-copyright = '2019, Hayaru Shouno'
+copyright = '2020, Keiji Yanai/Hayaru Shouno'
 author = 'Hayaru Shouno'
 
 # The short X.Y version

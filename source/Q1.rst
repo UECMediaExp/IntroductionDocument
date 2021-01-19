@@ -7,7 +7,7 @@
 
 課題は github classroom から提供されます．
 
-https://classroom.github.com/a/UeLJYqjW
+https://classroom.github.com/a/tVkhk2he
 
 を踏んでください．
 
@@ -20,8 +20,8 @@ https://classroom.github.com/a/UeLJYqjW
 リポジトリを削除します．
 
 
-ここまでで，各自の github アカウント上に，`2019ML-Q1-githubのID` という
-リポジトリが作成されていると思います．
+ここまでで，各自の github アカウント上に，`Q1-githubのID` という
+リポジトリが作成されるように仕込んでいます．
 
 
 リポジトリのローカルへのクローン
@@ -30,8 +30,7 @@ https://classroom.github.com/a/UeLJYqjW
 次に，作業を行うため，github 上のリポジトリを CED のローカルマシンにクローンします．
 場所は，準備のところで述べたように `notebook` ディレクトリの下に無いと jupyterhub が
 読み込めませんので注意してください．
-クローンには，github の `clone or download` ボタンを押して URL を取得後，
-端末で，
+クローンには，github の `Code` ボタンを押して URL を取得後，端末で，
 
 .. code-block:: sh
 
@@ -40,7 +39,10 @@ https://classroom.github.com/a/UeLJYqjW
 
 で取得します．ディレクトリは `notebook` の下であれば，jupyterhub は読めますので，
 適宜ディレクトリをほってもらってもOKです．
-また，クローンには，大学内の場合は，Clone with https の方が良いでしょう．
+
+なお，proxy サーバーを適切に設定しないと動かないと思いますので設定を忘れないようにしてください．
+
+
 
 
 README.md の修正
@@ -63,17 +65,11 @@ README.md の修正
 
 
 
-.. raw:: html
-
-         <iframe src="https://mm.cs.uec.ac.jp/media/chk.cgi" seamless width=600 height=250></iframe>
-
-
-
 課題1
 --------------------------------------------
 
 課題1 は，MNIST と呼ばれる数字データの識別実験を多層パーセプトロン(MLP)で行います．
-各リポジトリ内にある， `Question.ipynb` というファイルに課題を解いて出してください．
+リポジトリ内にある， `Question.ipynb` というファイルに課題を解いて出してください．
 
 なお，課題を解くにあたり，演習を５題用意しました．
 
@@ -94,12 +90,12 @@ README.md の修正
 
 
 適宜 `git add`, `git commit` および `git push` を行ってください．
+作業をおこなった日は最低１回の `git commit` 作業を行ってください．
 以下の時点での登録は必須事項とします．
-この点について提出が守られていないものに関しては *減点対象* とします．
+作業ログもみていますので，下記の事項は評価対象になります．
 
 * 各演習を終わらせた段階で，その都度 `git add`, `git commit`, `git push` までを
   おこなうこと．commit メッセージは演習おわりとでも書いておけばよいです．
   したがって，課題が終了する時点で，最低でも６回(演習５回＋課題１回)は commit が行われていることになるはずです．
 
 * その日の作業を終了する場合は，たとえ作業途中でも `git add` と `git commit` および `git push` の作業を行ってください．
-

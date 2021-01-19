@@ -7,7 +7,7 @@
 
 課題は github classroom から提供されます．
 
-https://classroom.github.com/a/cFwtxJz9
+https://classroom.github.com/a/MCfH-mgp
 
 を踏んでください．
 
@@ -19,7 +19,7 @@ https://classroom.github.com/a/cFwtxJz9
 リポジトリを削除します．
 
 
-ここまでで，各自の github アカウント上に， `2019ML-Q2-githubのID` という
+ここまでで，各自の github アカウント上に， `Q2-githubのID` という
 リポジトリが作成されていると思います．
 
 
@@ -35,10 +35,6 @@ README.md の修正
 ここも課題１と同様です．
 
 
-.. raw:: html
-
-         <iframe src="https://mm.cs.uec.ac.jp/media/chk.cgi" seamless width=600 height=250></iframe>
-
 
 課題2
 --------------------------------------------
@@ -46,5 +42,13 @@ README.md の修正
 課題2 は，Github に内包される Jupyter notebook を実行するという体で
 実施してください．課題の解凍ファイル等に関しては, `README.md` を参照してください．
 
+適宜 `git add`, `git commit` および `git push` を行ってください．
+作業をおこなった日は最低１回の `git commit` 作業を行ってください．
+以下の時点での登録は必須事項とします．
+作業ログもみていますので，下記の事項は評価対象になります．
 
-* その日の作業を終了した場合は， `git add` と `git commit` および `git push` の作業を行ってください．
+* 各演習を終わらせた段階で，その都度 `git add`, `git commit`, `git push` までを
+  おこなうこと．commit メッセージは演習おわりとでも書いておけばよいです．
+  したがって，課題が終了する時点で，最低でも６回(演習５回＋課題１回)は commit が行われていることになるはずです．
+
+* その日の作業を終了する場合は，たとえ作業途中でも `git add` と `git commit` および `git push` の作業を行ってください．
