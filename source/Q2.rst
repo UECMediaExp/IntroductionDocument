@@ -7,9 +7,9 @@
 
 課題は github classroom から提供されます．
 
-https://classroom.github.com/a/MCfH-mgp
+.. https://classroom.github.com/a/MCfH-mgp
 
-を踏んでください．
+.. を踏んでください．
 
 自分の学籍番号がのリストが出ますので，自分の学籍番号をクリックして
 自分の github アカウントへリポジトリをクローンしてください．
