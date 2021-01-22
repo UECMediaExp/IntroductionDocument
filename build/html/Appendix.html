@@ -94,7 +94,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#mnist">演習1-5 の MNIST　データセットダウンロード</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#github">Github 保存の除外ファイルについて</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pdf">2021/01/21 の講義で使った PDF をおいておきます</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#errta">Errta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#errta">Errta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">演習1-1 のノートブック上での修正</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -192,6 +195,20 @@
 </div>
 <div class="section" id="errta">
 <h2>Errta<a class="headerlink" href="#errta" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id3">
+<h3>演習1-1 のノートブック上での修正<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><cite>01.Regression.ipynb</cite> のノート記述だと</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3. model をデータ x, y に fit させるです．</span>
+<span class="c1">#    model.fit(loss=&#39;mean_squared_error&#39;, optimizer=&#39;sgd&#39;)</span>
+<span class="c1"># となります．</span>
+</pre></div>
+</div>
+<p>と記載していますが，</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;mean_squared_error&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;sgd&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>が正しい表記です．コメントなのでチェックしそこねました．</p>
+</div>
 </div>
 </div>
 
