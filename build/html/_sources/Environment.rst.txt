@@ -21,7 +21,30 @@ https://www.cc.uec.ac.jp/ug/ja/remote/vpn/index.html
 必須ではなく，Web ブラウザと端末ソフトウェアがあれば，実験遂行は可能です．
 
 
-1. IED/CEDでJupyterHub を使うための準備
+2. Proxy サービスの設定
+---------------------------------------------------------------------   
+
+IED/CED の GPUを使う場合は，学内サービスには Proxy を用いずに，学外のサービスのみを
+Proxy に設定する必要があります．
+下記のような形で proxy の除外設定をいれておいてください．
+
+.. code-block:: bash
+
+   `proxy.uec.ac.jp:8080`
+   `172.21.0.0/16`
+   `*ied.inf.uec.ac.jp`
+   `*ced.cei.uec.ac.jp`
+
+
+面倒であれば，学内の ホストは proxy を使わない
+
+* `*uec.ac.jp`
+
+という選択でもOKです（たぶん）．
+
+
+
+3. IED/CEDでJupyterHub を使うための準備
 ------------------------------------------
 
 この実験では，Webブラウザを介して ``python`` での実験を行います．
@@ -67,7 +90,7 @@ CED 標準の CentOS で計算作業をすることはないと思いますが�
 としておくと共通の `notebook` ディレクトリを使用できます．(`.ced_ubuntu` と `.ced_cenntos`) の部分が違います．
 
 
-2. Jupyter による実験
+4. Jupyter による実験
 ------------------------------------------
 
 こんどは，GPU サーバへ，Web を解してアクセスします．
@@ -96,7 +119,7 @@ http://gpu01.ced.cei.uec.ac.jp/
 確認してください．
 
 
-3. Github との接続
+5. Github との接続
 ------------------------------------------   
 
 課題に関しては github から提供されます．
@@ -115,7 +138,7 @@ Jupyter 側で `Terminal` を開くか，remote 環境で `git` の設定を行�
     git config --global user.email "shouno@uec.ac.jp"
 
 
-Proxyの設定
+Git での Proxyの設定
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 また大学の端末を使って作業する場合には，以下の proxy の設定も必要になってきます．

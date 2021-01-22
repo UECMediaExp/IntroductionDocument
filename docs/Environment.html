@@ -89,11 +89,12 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">実験環境の解説</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#uec-vpn">1. UEC VPN 環境の準備</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ied-cedjupyterhub">1. IED/CEDでJupyterHub を使うための準備</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#jupyter">2. Jupyter による実験</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#github">3. Github との接続</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#proxy">2. Proxy サービスの設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ied-cedjupyterhub">3. IED/CEDでJupyterHub を使うための準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jupyter">4. Jupyter による実験</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github">5. Github との接続</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id2">ユーザー名の設定</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#proxy">Proxyの設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#git-proxy">Git での Proxyの設定</a></li>
 </ul>
 </li>
 </ul>
@@ -101,7 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Q1.html">課題１ 多層パーセプトロンによるパターン識別</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Q2.html">課題２ Keras を用いた深層学習</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Q3.html">課題３ 深層学習その２</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Appendix.html">d 追加情報</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Appendix.html">追加情報</a></li>
 </ul>
 
             
@@ -186,8 +187,25 @@ IED/CED の計算機で作業する場合は必要ないですが，自宅など
 トンネルを掘って IED のホストそのものをGUIとして使うことは
 必須ではなく，Web ブラウザと端末ソフトウェアがあれば，実験遂行は可能です．</p>
 </div>
+<div class="section" id="proxy">
+<h2>2. Proxy サービスの設定<a class="headerlink" href="#proxy" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>IED/CED の GPUを使う場合は，学内サービスには Proxy を用いずに，学外のサービスのみを
+Proxy に設定する必要があります．
+下記のような形で proxy の除外設定をいれておいてください．</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">`</span>proxy.uec.ac.jp:8080<span class="sb">`</span>
+<span class="sb">`</span><span class="m">172</span>.21.0.0/16<span class="sb">`</span>
+<span class="sb">`</span>*ied.inf.uec.ac.jp<span class="sb">`</span>
+<span class="sb">`</span>*ced.cei.uec.ac.jp<span class="sb">`</span>
+</pre></div>
+</div>
+<p>面倒であれば，学内の ホストは proxy を使わない</p>
+<ul class="simple">
+<li><p><cite>*uec.ac.jp</cite></p></li>
+</ul>
+<p>という選択でもOKです（たぶん）．</p>
+</div>
 <div class="section" id="ied-cedjupyterhub">
-<h2>1. IED/CEDでJupyterHub を使うための準備<a class="headerlink" href="#ied-cedjupyterhub" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>3. IED/CEDでJupyterHub を使うための準備<a class="headerlink" href="#ied-cedjupyterhub" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>この実験では，Webブラウザを介して <code class="docutils literal notranslate"><span class="pre">python</span></code> での実験を行います．
 そのための環境は <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code> を用います．
 前期のプログラミング言語実験 python で行った環境とほぼ一緒です．</p>
@@ -220,7 +238,7 @@ $ mkdir notebook
 <p>としておくと共通の <cite>notebook</cite> ディレクトリを使用できます．(<cite>.ced_ubuntu</cite> と <cite>.ced_cenntos</cite>) の部分が違います．</p>
 </div>
 <div class="section" id="jupyter">
-<h2>2. Jupyter による実験<a class="headerlink" href="#jupyter" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>4. Jupyter による実験<a class="headerlink" href="#jupyter" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>こんどは，GPU サーバへ，Web を解してアクセスします．
 アクセスには Web ブラウザを用いてください．
 いずれの課題もGPUを数時間専有することが必要ですので， IEDの32個のGPUのみだけでなく，</p>
@@ -237,7 +255,7 @@ $ mkdir notebook
 確認してください．</p>
 </div>
 <div class="section" id="github">
-<h2>3. Github との接続<a class="headerlink" href="#github" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>5. Github との接続<a class="headerlink" href="#github" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>課題に関しては github から提供されます．
 github アカウントを作成してください(前期プログラミング言語実験 python 参照)．</p>
 <p>Jupyter 側で <cite>Terminal</cite> を開くか，remote 環境で <cite>git</cite> の設定を行ってください．
@@ -250,8 +268,8 @@ git config --global user.email <span class="s2">&quot;shouno@uec.ac.jp&quot;</sp
 </pre></div>
 </div>
 </div>
-<div class="section" id="proxy">
-<h3>Proxyの設定<a class="headerlink" href="#proxy" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="git-proxy">
+<h3>Git での Proxyの設定<a class="headerlink" href="#git-proxy" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>また大学の端末を使って作業する場合には，以下の proxy の設定も必要になってきます．
 proxy 関連は，学内から通信をする場合に多分必要です．
 (参照 <a class="reference external" href="https://www.cc.uec.ac.jp/ug/ja/network/proxy/proxy.html">https://www.cc.uec.ac.jp/ug/ja/network/proxy/proxy.html</a>)</p>
