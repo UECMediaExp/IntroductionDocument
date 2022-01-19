@@ -46,7 +46,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">追加情報</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#mnist">演習1-5 の MNIST データセットダウンロード</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pdf">2022/01/20 の講義で使った PDF をおいておきます</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gpu">不調なGPU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gpu">GPU 割当</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#errta">Errta</a></li>
 </ul>
 </li>
@@ -95,8 +95,14 @@
 <p><a class="reference external" href="20210121.pdf">講義で使ったスライドファイル</a> をおいておきます．</p>
 </section>
 <section id="gpu">
-<h2>不調なGPU<a class="headerlink" href="#gpu" title="このヘッドラインへのパーマリンク"></a></h2>
-<p>技師の島崎さんによれば，CED のGPU25, 30, 32 は不調みたいです．</p>
+<h2>GPU 割当<a class="headerlink" href="#gpu" title="このヘッドラインへのパーマリンク"></a></h2>
+<p>GPU は全員に行き渡るほど潤沢ではないです．なので，原則として以下のような運用でやっていきます．
+（問題があれば都度修正します）</p>
+<ul class="simple">
+<li><p>学籍番号の下３桁が450未満: CED の GPU 30 枚 {gpu02〜gpu33}.ced.cei.uec.ac.jp</p></li>
+<li><p>学籍番号の下３桁が450以上: IED  の GPU 32 枚 {gpu1~gpu4}.ied.inf.uec.ac.jp#0~#7</p></li>
+</ul>
+<p>技師の島崎さんによれば，CED のGPU25, 27, 30 は不調みたいです．</p>
 </section>
 <section id="errta">
 <h2>Errta<a class="headerlink" href="#errta" title="このヘッドラインへのパーマリンク"></a></h2>
