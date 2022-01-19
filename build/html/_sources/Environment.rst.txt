@@ -119,33 +119,3 @@ http://gpu01.ced.cei.uec.ac.jp/
 確認してください．
 
 
-5. Github との接続
-------------------------------------------   
-
-課題に関しては github から提供されます．
-github アカウントを作成してください(前期プログラミング言語実験 python 参照)．
-
-Jupyter 側で `Terminal` を開くか，remote 環境で `git` の設定を行ってください．
-以下，プログラミング言語実験からの抜粋です．前期で IEDで設定した場合は
-そのまま引き継がれます．CED で使う場合は再度設定が必要かもしれません．
-
-ユーザー名の設定
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: sh
-
-    git config --global user.name "Hayaru SHOUNO"
-    git config --global user.email "shouno@uec.ac.jp"
-
-
-Git での Proxyの設定
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-また大学の端末を使って作業する場合には，以下の proxy の設定も必要になってきます．
-proxy 関連は，学内から通信をする場合に多分必要です．
-(参照 https://www.cc.uec.ac.jp/ug/ja/network/proxy/proxy.html)
-
-.. code-block:: sh
-
-    git config --global http.proxy http://proxy.uec.ac.jp:8080
-    git config --global https.proxy http://proxy.uec.ac.jp:8080

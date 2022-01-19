@@ -1,71 +1,35 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="ja" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>課題１ 多層パーセプトロンによるパターン識別 &mdash; Media Experiment Machine Learning / Computer Vision  ドキュメント</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/translations.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
     <link rel="next" title="課題２ Keras を用いた深層学習" href="Q2.html" />
     <link rel="prev" title="実験環境の解説" href="Environment.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> Media Experiment Machine Learning / Computer Vision
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -73,26 +37,14 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Environment.html">実験環境の解説</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">課題１ 多層パーセプトロンによるパターン識別</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#github">課題1の github 上でのクローン</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">リポジトリのローカルへのクローン</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#readme-md">README.md の修正</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">課題1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">課題1のテンプレートの取得</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">リポジトリのローカルへのクローン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">課題1</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Q2.html">課題２ Keras を用いた深層学習</a></li>
@@ -100,117 +52,52 @@
 <li class="toctree-l1"><a class="reference internal" href="Appendix.html">追加情報</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Media Experiment Machine Learning / Computer Vision</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>課題１ 多層パーセプトロンによるパターン識別</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="_sources/Q1.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="id1">
-<h1>課題１ 多層パーセプトロンによるパターン識別<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<div class="section" id="github">
-<h2>課題1の github 上でのクローン<a class="headerlink" href="#github" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>課題は github classroom から提供されます．</p>
-<p><a class="reference external" href="https://classroom.github.com/a/tVkhk2he">https://classroom.github.com/a/tVkhk2he</a></p>
-<p>を踏んでください．</p>
-<p><em>自分の学籍番号がのリスト</em> が出ますので，自分の学籍番号をクリックして
-自分の github アカウントへリポジトリをクローンしてください．</p>
-<p>もし間違った学籍番号を推してしまった場合や，
-キャンセルボタンを押して不完全なリポジトリを作ってしまった場合は，TA もしくは庄野まで
-連絡してください．
-リポジトリを削除します．</p>
+             
+  <section id="id1">
+<h1>課題１ 多層パーセプトロンによるパターン識別<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク"></a></h1>
+<section id="id2">
+<h2>課題1のテンプレートの取得<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク"></a></h2>
+<p>課題は IED のフォルダに置きます．</p>
 <p>ここまでで，各自の github アカウント上に，<cite>Q1-githubのID</cite> という
 リポジトリが作成されるように仕込んでいます．</p>
-</div>
-<div class="section" id="id2">
-<h2>リポジトリのローカルへのクローン<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>次に，作業を行うため，github 上のリポジトリを CED のローカルマシンにクローンします．
+</section>
+<section id="id3">
+<h2>リポジトリのローカルへのクローン<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク"></a></h2>
+<p>次に，作業を行うため，テンプレートをフォルダごと CED のローカルマシンにクローンします．
 場所は，準備のところで述べたように <cite>notebook</cite> ディレクトリの下に無いと jupyterhub が
-読み込めませんので注意してください．
-クローンには，github の <cite>Code</cite> ボタンを押して URL を取得後，端末で，</p>
+読み込めませんので注意してください．</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/notebook
-$ git clone 取得したURL
+$ rsync ほげほげほげ
 </pre></div>
 </div>
 <p>で取得します．ディレクトリは <cite>notebook</cite> の下であれば，jupyterhub は読めますので，
 適宜ディレクトリをほってもらってもOKです．</p>
-<p>なお，proxy サーバーを適切に設定しないと動かないと思いますので設定を忘れないようにしてください．</p>
-</div>
-<div class="section" id="readme-md">
-<h2>README.md の修正<a class="headerlink" href="#readme-md" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>最初に行う作業は，ブランチの作成と <cite>README.md</cite> の修正です．
-まず，作業ブランチを切ってください．名前は適当でよいですが
-この場合は WorkInProgress (WIP) などで良いです．</p>
-<p>次に <cite>README.md</cite> の修正ですが，これは</p>
-<ul class="simple">
-<li><p>学籍番号</p></li>
-<li><p>氏名</p></li>
-</ul>
-<p>の欄を適宜自分のものにかえて，この時点で， <cite>git add</cite>, <cite>git commit</cite>
-および <cite>git commit</cite> までの作業を行ってください．</p>
-<p>なお，スクリプトで学籍番号情報を抜き出しますので <em>フォーマットは維持</em> してください．</p>
-</div>
-<div class="section" id="id3">
-<h2>課題1<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</section>
+<section id="id4">
+<h2>課題1<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク"></a></h2>
 <p>課題1 は，MNIST と呼ばれる数字データの識別実験を多層パーセプトロン(MLP)で行います．
 リポジトリ内にある， <cite>Question.ipynb</cite> というファイルに課題を解いて出してください．</p>
 <p>なお，課題を解くにあたり，演習を５題用意しました．</p>
@@ -226,65 +113,38 @@ $ git clone 取得したURL
 <p>が演習にあたります．課題１は， <cite>05.MNIST.ipynb</cite> と <cite>04.Classification.ipynb</cite>
 とを解くことによって，これらの組み合わせをつかうことで解くことが可能になります．</p>
 <p>演習の解答例は <cite>PracticeHint</cite> の中にあります．</p>
-<p>適宜 <cite>git add</cite>, <cite>git commit</cite> および <cite>git push</cite> を行ってください．
-作業をおこなった日は最低１回の <cite>git commit</cite> 作業を行ってください．
-以下の時点での登録は必須事項とします．
-作業ログもみていますので，下記の事項は評価対象になります．</p>
-<ul class="simple">
-<li><p>各演習を終わらせた段階で，その都度 <cite>git add</cite>, <cite>git commit</cite>, <cite>git push</cite> までを
-おこなうこと．commit メッセージは演習おわりとでも書いておけばよいです．
-したがって，課題が終了する時点で，最低でも６回(演習５回＋課題１回)は commit が行われていることになるはずです．</p></li>
-<li><p>その日の作業を終了する場合は，たとえ作業途中でも <cite>git add</cite> と <cite>git commit</cite> および <cite>git push</cite> の作業を行ってください．</p></li>
-</ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="Q2.html" class="btn btn-neutral float-right" title="課題２ Keras を用いた深層学習" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Environment.html" class="btn btn-neutral float-left" title="実験環境の解説" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Q2.html" class="btn btn-neutral float-right" title="課題２ Keras を用いた深層学習" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Keiji Yanai/Hayaru Shouno.
-
-    </p>
+    <p>&#169; Copyright 2021, Keiji Yanai/Hayaru Shouno.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
