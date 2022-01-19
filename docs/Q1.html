@@ -19,7 +19,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="課題２ Keras を用いた深層学習" href="Q2.html" />
+    <link rel="next" title="課題2 Keras を用いた深層学習" href="Q2.html" />
     <link rel="prev" title="実験環境の解説" href="Environment.html" /> 
 </head>
 
@@ -43,11 +43,12 @@
 <li class="toctree-l1"><a class="reference internal" href="Environment.html">実験環境の解説</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">課題１ 多層パーセプトロンによるパターン識別</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">課題1のテンプレートの取得</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">リポジトリのローカルへのクローン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">テンプレートフォルダの取得</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">課題1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">課題の提出</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Q2.html">課題２ Keras を用いた深層学習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Q2.html">課題2 Keras を用いた深層学習</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Q3.html">課題３ 深層学習その２</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Appendix.html">追加情報</a></li>
 </ul>
@@ -80,21 +81,23 @@
 <h1>課題１ 多層パーセプトロンによるパターン識別<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク"></a></h1>
 <section id="id2">
 <h2>課題1のテンプレートの取得<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク"></a></h2>
-<p>課題は IED のフォルダに置きます．</p>
-<p>ここまでで，各自の github アカウント上に，<cite>Q1-githubのID</cite> という
-リポジトリが作成されるように仕込んでいます．</p>
+<p>課題は IED のフォルダに置いてあります．</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>/usr/local/class/media/kada1
+</pre></div>
+</div>
+<p>これを各自で取得してもらいます．</p>
 </section>
 <section id="id3">
-<h2>リポジトリのローカルへのクローン<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク"></a></h2>
-<p>次に，作業を行うため，テンプレートをフォルダごと CED のローカルマシンにクローンします．
+<h2>テンプレートフォルダの取得<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク"></a></h2>
+<p>作業を行うため，テンプレートをフォルダごと IED/CED のローカルマシンにクローンします．
 場所は，準備のところで述べたように <cite>notebook</cite> ディレクトリの下に無いと jupyterhub が
 読み込めませんので注意してください．</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/notebook
-$ rsync ほげほげほげ
+$ rsync -avz /usr/local/class/media/kadai1/ kadai1/
 </pre></div>
 </div>
-<p>で取得します．ディレクトリは <cite>notebook</cite> の下であれば，jupyterhub は読めますので，
-適宜ディレクトリをほってもらってもOKです．</p>
+<p>などで取得します．ディレクトリは <cite>notebook</cite> の下であれば，jupyterhub は読めますので，
+適宜ディレクトリを掘ってもらってもOKです．</p>
 </section>
 <section id="id4">
 <h2>課題1<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク"></a></h2>
@@ -114,6 +117,18 @@ $ rsync ほげほげほげ
 とを解くことによって，これらの組み合わせをつかうことで解くことが可能になります．</p>
 <p>演習の解答例は <cite>PracticeHint</cite> の中にあります．</p>
 </section>
+<section id="id5">
+<h2>課題の提出<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク"></a></h2>
+<p>演習1~5, 課題1 をとき終えたら，各ノートブックを PDF にしてください．
+PDFにするにはブラウザの印刷を選択して，PDFで保存をすればOKのハズです．
+これを，指定された課題提出ページへアップロードしてください．</p>
+<p><a class="reference external" href="https://mm.cs.uec.ac.jp/media/">https://mm.cs.uec.ac.jp/media/</a></p>
+<p>の第1回目の行が提出場所になります．</p>
+<ul class="simple">
+<li><p>1問目〜5問目までに，それぞれ演習1~5 に該当するファイルをアップロードしてください</p></li>
+<li><p>6問目に課題に該当するファイルをアップロードしてください．</p></li>
+</ul>
+</section>
 </section>
 
 
@@ -121,7 +136,7 @@ $ rsync ほげほげほげ
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Environment.html" class="btn btn-neutral float-left" title="実験環境の解説" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Q2.html" class="btn btn-neutral float-right" title="課題２ Keras を用いた深層学習" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Q2.html" class="btn btn-neutral float-right" title="課題2 Keras を用いた深層学習" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

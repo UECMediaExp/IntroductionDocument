@@ -41,16 +41,13 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Environment.html">実験環境の解説</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Q1.html">課題１ 多層パーセプトロンによるパターン識別</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Q2.html">課題２ Keras を用いた深層学習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Q2.html">課題2 Keras を用いた深層学習</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Q3.html">課題３ 深層学習その２</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">追加情報</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#mnist">演習1-5 の MNIST　データセットダウンロード</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#github">Github 保存の除外ファイルについて</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pdf">2021/01/21 の講義で使った PDF をおいておきます</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#errta">Errta</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">演習1-1 のノートブック上での修正</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#mnist">演習1-5 の MNIST データセットダウンロード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pdf">2022/01/20 の講義で使った PDF をおいておきます</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gpu">GPU 割当</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#errta">Errta</a></li>
 </ul>
 </li>
 </ul>
@@ -82,7 +79,7 @@
   <section id="id1">
 <h1>追加情報<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク"></a></h1>
 <section id="mnist">
-<h2>演習1-5 の MNIST　データセットダウンロード<a class="headerlink" href="#mnist" title="このヘッドラインへのパーマリンク"></a></h2>
+<h2>演習1-5 の MNIST データセットダウンロード<a class="headerlink" href="#mnist" title="このヘッドラインへのパーマリンク"></a></h2>
 <p>MNIST を大学でダウンロードする場合には， proxy を設定する必要があります．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
@@ -93,34 +90,22 @@
 </div>
 <p>なお，CED と IED でダウンロードすると，両方のハードディスクにデータセットの <em>ファイルが残る</em> 場合があるので注意が必要です．</p>
 </section>
-<section id="github">
-<h2>Github 保存の除外ファイルについて<a class="headerlink" href="#github" title="このヘッドラインへのパーマリンク"></a></h2>
-<p>Github は，巨大なデータを保存するのに向いていないため，この実験では，
-アップロードするファイル群を制限しています．
-<cite>.gitignore</cite> にあるように <cite>python</cite> や <cite>Jupyter</cite> 実行時の１次的なファイルや
-結果をまとめた <cite>.h5</cite> と呼ばれるデータベースファイルは除外しています．
-もし，必要であれば各自でダウンロードしてください．</p>
-</section>
 <section id="pdf">
-<h2>2021/01/21 の講義で使った PDF をおいておきます<a class="headerlink" href="#pdf" title="このヘッドラインへのパーマリンク"></a></h2>
-<p><a class="reference external" href="20210121.pdf">講義で使ったスライドファイル</a> をおいておきます．</p>
+<h2>2022/01/20 の講義で使った PDF をおいておきます<a class="headerlink" href="#pdf" title="このヘッドラインへのパーマリンク"></a></h2>
+<p><a class="reference external" href="20220120.pdf">講義で使ったスライドファイル</a> をおいておきます．</p>
+</section>
+<section id="gpu">
+<h2>GPU 割当<a class="headerlink" href="#gpu" title="このヘッドラインへのパーマリンク"></a></h2>
+<p>GPU は全員に行き渡るほど潤沢ではないです．なので，原則として以下のような運用でやっていきます．
+（問題があれば都度修正します）</p>
+<ul class="simple">
+<li><p>学籍番号の下３桁が450未満: CED の GPU 30 枚 {gpu02〜gpu33}.ced.cei.uec.ac.jp</p></li>
+<li><p>学籍番号の下３桁が450以上: IED  の GPU 32 枚 {gpu1~gpu4}.ied.inf.uec.ac.jp#0~#7</p></li>
+</ul>
+<p>技師の島崎さんによれば，CED のGPU25, 27, 30 は不調みたいです．</p>
 </section>
 <section id="errta">
 <h2>Errta<a class="headerlink" href="#errta" title="このヘッドラインへのパーマリンク"></a></h2>
-<section id="id3">
-<h3>演習1-1 のノートブック上での修正<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク"></a></h3>
-<p><cite>01.Regression.ipynb</cite> のノート記述だと</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3. model をデータ x, y に fit させるです．</span>
-<span class="c1">#    model.fit(loss=&#39;mean_squared_error&#39;, optimizer=&#39;sgd&#39;)</span>
-<span class="c1"># となります．</span>
-</pre></div>
-</div>
-<p>と記載していますが，</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;mean_squared_error&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;sgd&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>が正しい表記です．コメントなのでチェックしそこねました．</p>
-</section>
 </section>
 </section>
 

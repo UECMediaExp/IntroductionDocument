@@ -85,6 +85,8 @@ IED/CED で JupyterHub を使うためには，まず，Jupyter のノートの�
 
 CED 標準の CentOS で計算作業をすることはないと思いますが，もしそのような状況になる場合は，
 
+.. code-block:: sh
+
    $ ln -s ~/IED_HOME/notebook ~/.ced_centos/notebook
 
 としておくと共通の `notebook` ディレクトリを使用できます．(`.ced_ubuntu` と `.ced_cenntos`) の部分が違います．
