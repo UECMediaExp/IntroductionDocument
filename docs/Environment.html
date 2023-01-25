@@ -14,7 +14,9 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
         <script src="_static/translations.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
@@ -43,7 +45,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">実験環境の解説</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#uec-vpn">1. UEC VPN 環境の準備</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#proxy">2. Proxy サービスの設定</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ied-cedjupyterhub">3. IED/CEDでJupyterHub を使うための準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#iedjupyterhub">3. IEDでJupyterHub を使うための準備</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#jupyter">4. Jupyter による実験</a></li>
 </ul>
 </li>
@@ -66,8 +68,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>実験環境の解説</li>
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">実験環境の解説</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/Environment.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -78,9 +80,9 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>実験環境の解説<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク"></a></h1>
+<h1>実験環境の解説<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h1>
 <section id="uec-vpn">
-<h2>1. UEC VPN 環境の準備<a class="headerlink" href="#uec-vpn" title="このヘッドラインへのパーマリンク"></a></h2>
+<h2>1. UEC VPN 環境の準備<a class="headerlink" href="#uec-vpn" title="この見出しへのパーマリンク"></a></h2>
 <p>この実験では，IED/CED の GPU マシンを使います．
 (Google Colab とかでも演習はできると思いますが，Colab は使うほど遅いTPUに割り当てられる傾向が見れるので
 無料使用の枠での実行はお勧めしません)</p>
@@ -95,7 +97,7 @@ IED/CED の計算機で作業する場合は必要ないですが，自宅など
 必須ではなく，Web ブラウザと端末ソフトウェアがあれば，実験遂行は可能です．</p>
 </section>
 <section id="proxy">
-<h2>2. Proxy サービスの設定<a class="headerlink" href="#proxy" title="このヘッドラインへのパーマリンク"></a></h2>
+<h2>2. Proxy サービスの設定<a class="headerlink" href="#proxy" title="この見出しへのパーマリンク"></a></h2>
 <p>IED/CED の GPUを使う場合は，学内サービスには Proxy を用いずに，学外のサービスのみを
 Proxy に設定する必要があります．
 下記のような形で proxy の除外設定をいれておいてください．</p>
@@ -111,51 +113,40 @@ Proxy に設定する必要があります．
 </ul>
 <p>という選択でもOKです（たぶん）．</p>
 </section>
-<section id="ied-cedjupyterhub">
-<h2>3. IED/CEDでJupyterHub を使うための準備<a class="headerlink" href="#ied-cedjupyterhub" title="このヘッドラインへのパーマリンク"></a></h2>
+<section id="iedjupyterhub">
+<h2>3. IEDでJupyterHub を使うための準備<a class="headerlink" href="#iedjupyterhub" title="この見出しへのパーマリンク"></a></h2>
 <p>この実験では，Webブラウザを介して <code class="docutils literal notranslate"><span class="pre">python</span></code> での実験を行います．
 そのための環境は <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code> を用います．
 前期のプログラミング言語実験 python で行った環境とほぼ一緒です．</p>
 <p>ちょっと違うのは Jupyter を提供してくれるのが計算機サーバになっている点で
-GPU も使えます．このため CED の GPU サーバーをホストとして JupyterHub と呼ばれるサービスにアクセスします．</p>
-<p>IED/CED で JupyterHub を使うためには，まず，Jupyter のノートの保管場所を作る必要があります．
+GPU も使えます．このため IED の GPU サーバーをホストとして JupyterHub と呼ばれるサービスにアクセスします．</p>
+<p>IED で JupyterHub を使うためには，まず，Jupyter のノートの保管場所を作る必要があります．
 これは，各アカウントホームディレクトリ下にある． <cite>~/notebook</cite> フォルダが指定されています．</p>
 <p>まず <code class="docutils literal notranslate"><span class="pre">sol.edu.cc.uec.ac.jp</span></code> へログインして， <cite>IED_HOME</cite> の下に
 <cite>notebook</cite> ディレクトリを作ります．</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ ssh sol.edu.cc.uec.ac.jp
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ssh<span class="w"> </span>sol.edu.cc.uec.ac.jp
 </pre></div>
 </div>
 <p>この時点で， <cite>~/IED_HOME/notebook</cite> が在るかを確認してください．
 なければ，</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> IED_HOME
-$ mkdir notebook
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>IED_HOME
+$<span class="w"> </span>mkdir<span class="w"> </span>notebook
 </pre></div>
 </div>
-<p>のようにして，空のディレクトリを作ってもらえるようにしてもらえればOKです．
-次に CED 側の GPU でも使えるようおまじないをかけておきます．
-（CED側のホストで，<cite>notebook</cite> ディレクトリが所定位置に見えるように細工をしています）</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ ln -s ~/IED_HOME/notebook ~/.ced_ubuntu/notebook
-</pre></div>
-</div>
-<p>これで Jupyter を使う準備が整いました．</p>
-<p>CED 標準の CentOS で計算作業をすることはないと思いますが，もしそのような状況になる場合は，</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ ln -s ~/IED_HOME/notebook ~/.ced_centos/notebook
-</pre></div>
-</div>
-<p>としておくと共通の <cite>notebook</cite> ディレクトリを使用できます．(<cite>.ced_ubuntu</cite> と <cite>.ced_cenntos</cite>) の部分が違います．</p>
+<p>のようにして，空のディレクトリを作ってもらえるようにしてもらえればOKです．</p>
 </section>
 <section id="jupyter">
-<h2>4. Jupyter による実験<a class="headerlink" href="#jupyter" title="このヘッドラインへのパーマリンク"></a></h2>
-<p>こんどは，GPU サーバへ，Web を解してアクセスします．
-アクセスには Web ブラウザを用いてください．
-いずれの課題もGPUを数時間専有することが必要ですので， IEDの32個のGPUのみだけでなく，</p>
+<h2>4. Jupyter による実験<a class="headerlink" href="#jupyter" title="この見出しへのパーマリンク"></a></h2>
+<p>大学内のネットワークに繋げない場合は，VPN設定とプロキシ設定を確認してください．</p>
+<p>この実験では，いずれの課題もGPUを数時間専有することが必要です.
+これらの GPU サーバへは，Web を解してアクセスし，実験は Jupyter notebook を用いることになります．
+今年から IEDの72個のGPUがありますが，一人１個のGPU割り当てようとすると若干足りないので，
+授業内で説明するルールでGPU を割り振りたいと思います．</p>
+<p>なお GPU の空きに関しては</p>
 <p><a class="reference external" href="http://gpu1.ied.inf.uec.ac.jp/">http://gpu1.ied.inf.uec.ac.jp/</a></p>
-<p>CEDの34個のGPU (1GPUサーバ * 34台(ただし2台故障中))</p>
-<p><a class="reference external" href="http://gpu01.ced.cei.uec.ac.jp/">http://gpu01.ced.cei.uec.ac.jp/</a></p>
-<p>も活用してください．どちらも同じように利用可能です．</p>
-<p>繋げない場合は，VPN設定とプロキシ設定を確認してください．</p>
-<p>上手く繋げたら，ここで GPU があいているサーバーを選びます．</p>
-<p>すると，Sign in ウィンドウが開きますので，ここで，
+<p>を確認してください．</p>
+<p>ガイダンスで説明したGPUサーバーを選択してください．
+すると，Sign in ウィンドウが開きますので，ここで，
 大学アカウントのユーザー名とパスワードを入れてください．</p>
 <p>このとき，前述の <cite>notebook</cite> ディレクトリがないとエラーが起きます．</p>
 <p>適当に Jupyter notebook を作ると <cite>notebook</cite> ディレクトリにファイルができるので

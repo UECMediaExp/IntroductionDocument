@@ -14,7 +14,9 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
         <script src="_static/translations.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
@@ -67,8 +69,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>追加情報</li>
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">追加情報</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/Appendix.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -79,20 +81,20 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>追加情報<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク"></a></h1>
+<h1>追加情報<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h1>
 <section id="id2">
-<h2>演習課題のコピーについて<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク"></a></h2>
+<h2>演習課題のコピーについて<a class="headerlink" href="#id2" title="この見出しへのパーマリンク"></a></h2>
 <p>演習課題のテンプレートは，IED のファイルサーバにおいてあります．
 なので， <cite>sol.cc.uec.ac.jp</cite> で rsync をしようとするとファイルが有りませんと言われます．
 かならず IED のホストでコピー作業を行ってください．</p>
 </section>
 <section id="firefox">
-<h2>Firefox のプロキシ設定まとめ<a class="headerlink" href="#firefox" title="このヘッドラインへのパーマリンク"></a></h2>
+<h2>Firefox のプロキシ設定まとめ<a class="headerlink" href="#firefox" title="この見出しへのパーマリンク"></a></h2>
 <p>TA の人たちがまとめてくれました．Firefox をブラウザとして使う場合の proxy  周りの注意点です．
 <a class="reference external" href="vpn_2022mediaexp.pdf">Firefox を使う場合の注意</a></p>
 </section>
 <section id="mnist">
-<h2>演習1-5 の MNIST データセットダウンロード<a class="headerlink" href="#mnist" title="このヘッドラインへのパーマリンク"></a></h2>
+<h2>演習1-5 の MNIST データセットダウンロード<a class="headerlink" href="#mnist" title="この見出しへのパーマリンク"></a></h2>
 <p>MNIST を大学でダウンロードする場合には， proxy を設定する必要があります．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
@@ -101,24 +103,26 @@
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;https_proxy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://proxy.uec.ac.jp:8080/&#39;</span>
 </pre></div>
 </div>
-<p>なお，CED と IED でダウンロードすると，両方のハードディスクにデータセットの <em>ファイルが残る</em> 場合があるので注意が必要です．</p>
+<p>なお，IED でダウンロードすると，ハードディスクにデータセットの <em>ファイルが残る</em> ので注意が必要です．</p>
 </section>
 <section id="pdf">
-<h2>2022/01/20 の講義で使った PDF をおいておきます<a class="headerlink" href="#pdf" title="このヘッドラインへのパーマリンク"></a></h2>
+<h2>2022/01/20 の講義で使った PDF をおいておきます<a class="headerlink" href="#pdf" title="この見出しへのパーマリンク"></a></h2>
 <p><a class="reference external" href="20220120.pdf">講義で使ったスライドファイル</a> をおいておきます．</p>
 </section>
 <section id="gpu">
-<h2>GPU 割当<a class="headerlink" href="#gpu" title="このヘッドラインへのパーマリンク"></a></h2>
+<h2>GPU 割当<a class="headerlink" href="#gpu" title="この見出しへのパーマリンク"></a></h2>
 <p>GPU は全員に行き渡るほど潤沢ではないです．なので，原則として以下のような運用でやっていきます．
 （問題があれば都度修正します）</p>
+<p>gpu 1, 2 3, 4 は RTX3080 で GPU 8個， gpu5, 6, 7, 8 は A4000でGPU10個乗っています．
+均等に割り当てるとして</p>
 <ul class="simple">
-<li><p>学籍番号の下３桁が450未満: CED の GPU 30 枚 {gpu02〜gpu33}.ced.cei.uec.ac.jp</p></li>
-<li><p>学籍番号の下３桁が450以上: IED  の GPU 32 枚 {gpu1~gpu4}.ied.inf.uec.ac.jp#0~#7</p></li>
+<li><p>１組: GPU 36 枚 gpu{1, 2, 5, 6}.ied.cei.uec.ac.jp</p></li>
+<li><p>２組: GPU 36 枚 gpu{3, 4, 7, 8}.ied.inf.uec.ac.jp</p></li>
 </ul>
-<p>技師の島崎さんによれば，CED のGPU25, 27, 30 は不調みたいです．</p>
+<p>とします．</p>
 </section>
 <section id="errta">
-<h2>Errta<a class="headerlink" href="#errta" title="このヘッドラインへのパーマリンク"></a></h2>
+<h2>Errta<a class="headerlink" href="#errta" title="この見出しへのパーマリンク"></a></h2>
 </section>
 </section>
 

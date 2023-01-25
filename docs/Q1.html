@@ -14,7 +14,9 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
         <script src="_static/translations.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
@@ -66,8 +68,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>課題１ 多層パーセプトロンによるパターン識別</li>
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">課題１ 多層パーセプトロンによるパターン識別</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/Q1.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -78,29 +80,29 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>課題１ 多層パーセプトロンによるパターン識別<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク"></a></h1>
+<h1>課題１ 多層パーセプトロンによるパターン識別<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h1>
 <section id="id2">
-<h2>課題1のテンプレートの取得<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク"></a></h2>
+<h2>課題1のテンプレートの取得<a class="headerlink" href="#id2" title="この見出しへのパーマリンク"></a></h2>
 <p>課題は IED のフォルダに置いてあります．</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>/usr/local/class/media/kada1
 </pre></div>
 </div>
-<p>これを各自で取得してもらいます．</p>
+<p>これを各自で取得してください．</p>
 </section>
 <section id="id3">
-<h2>テンプレートフォルダの取得<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク"></a></h2>
+<h2>テンプレートフォルダの取得<a class="headerlink" href="#id3" title="この見出しへのパーマリンク"></a></h2>
 <p>作業を行うため，テンプレートをフォルダごと IED/CED のローカルマシンにクローンします．
 場所は，準備のところで述べたように <cite>notebook</cite> ディレクトリの下に無いと jupyterhub が
 読み込めませんので注意してください．</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/notebook
-$ rsync -avz /usr/local/class/media/kadai1/ kadai1/
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/notebook
+$<span class="w"> </span>rsync<span class="w"> </span>-avz<span class="w"> </span>/usr/local/class/media/kadai1/<span class="w"> </span>kadai1/
 </pre></div>
 </div>
 <p>などで取得します．ディレクトリは <cite>notebook</cite> の下であれば，jupyterhub は読めますので，
 適宜ディレクトリを掘ってもらってもOKです．</p>
 </section>
 <section id="id4">
-<h2>課題1<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク"></a></h2>
+<h2>課題1<a class="headerlink" href="#id4" title="この見出しへのパーマリンク"></a></h2>
 <p>課題1 は，MNIST と呼ばれる数字データの識別実験を多層パーセプトロン(MLP)で行います．
 リポジトリ内にある， <cite>Question.ipynb</cite> というファイルに課題を解いて出してください．</p>
 <p>なお，課題を解くにあたり，演習を５題用意しました．</p>
@@ -118,7 +120,7 @@ $ rsync -avz /usr/local/class/media/kadai1/ kadai1/
 <p>演習の解答例は <cite>PracticeHint</cite> の中にあります．</p>
 </section>
 <section id="id5">
-<h2>課題の提出<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク"></a></h2>
+<h2>課題の提出<a class="headerlink" href="#id5" title="この見出しへのパーマリンク"></a></h2>
 <p>演習1~5, 課題1 をとき終えたら，各ノートブックを PDF にしてください．
 PDFにするにはブラウザの印刷を選択して，PDFで保存をすればOKのハズです．
 これを，指定された課題提出ページへアップロードしてください．</p>
