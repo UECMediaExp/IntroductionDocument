@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-メディア情報学実験（機械学習/パターン認識）
+メディア情報学実験（情報検索・認識（画像））
 ===============================================================================
 
 .. toctree::

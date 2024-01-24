@@ -21,8 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="課題１ 多層パーセプトロンによるパターン識別" href="Q1.html" />
-    <link rel="prev" title="メディア情報学実験（機械学習/パターン認識）" href="index.html" /> 
+    <link rel="next" title="課題１ 機械学習とニューラルネットワーク" href="Q1.html" />
+    <link rel="prev" title="メディア情報学実験（情報検索・認識（画像））" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,14 +43,13 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">実験環境の解説</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#uec-vpn">1. UEC VPN 環境の準備</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#proxy">2. Proxy サービスの設定</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#iedjupyterhub">3. IEDでJupyterHub を使うための準備</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#jupyter">4. Jupyter による実験</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ied">1. IED で，必要なもの</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#iedjupyterhub">2. IEDでJupyterHub を使うための準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jupyter">3. Jupyter による実験</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Q1.html">課題１ 多層パーセプトロンによるパターン識別</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Q2.html">課題2 Keras を用いた深層学習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Q1.html">課題１ 機械学習とニューラルネットワーク</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Q2.html">課題2 深層学習その１</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Q3.html">課題３ 深層学習その２</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Appendix.html">追加情報</a></li>
 </ul>
@@ -81,66 +80,40 @@
              
   <section id="id1">
 <h1>実験環境の解説<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h1>
-<section id="uec-vpn">
-<h2>1. UEC VPN 環境の準備<a class="headerlink" href="#uec-vpn" title="この見出しへのパーマリンク"></a></h2>
-<p>この実験では，IED/CED の GPU マシンを使います．
-(Google Colab とかでも演習はできると思いますが，Colab は使うほど遅いTPUに割り当てられる傾向が見れるので
-無料使用の枠での実行はお勧めしません)</p>
-<p>IED/CEDにつなぐには大学側のネットワークにホストを入れておく必要があります．
-このため大学側と Virtual Private Network (VPN) を形成する必要があります．
-IED/CED の計算機で作業する場合は必要ないですが，自宅などから繋いで演習実験を
-行う場合は必須ですので情報基盤センターの指示にしたがって VPN を構築する必要があります．
-詳細は下記を参照してください．</p>
-<p><a class="reference external" href="https://www.cc.uec.ac.jp/ug/ja/remote/vpn/index.html">https://www.cc.uec.ac.jp/ug/ja/remote/vpn/index.html</a></p>
-<p>なお，前期のプログラミング言語実験でやったように，
-トンネルを掘って IED のホストそのものをGUIとして使うことは
-必須ではなく，Web ブラウザと端末ソフトウェアがあれば，実験遂行は可能です．</p>
-</section>
-<section id="proxy">
-<h2>2. Proxy サービスの設定<a class="headerlink" href="#proxy" title="この見出しへのパーマリンク"></a></h2>
-<p>IED/CED の GPUを使う場合は，学内サービスには Proxy を用いずに，学外のサービスのみを
-Proxy に設定する必要があります．
-下記のような形で proxy の除外設定をいれておいてください．</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">`</span>proxy.uec.ac.jp:8080<span class="sb">`</span>
-<span class="sb">`</span><span class="m">172</span>.21.0.0/16<span class="sb">`</span>
-<span class="sb">`</span>*ied.inf.uec.ac.jp<span class="sb">`</span>
-<span class="sb">`</span>*ced.cei.uec.ac.jp<span class="sb">`</span>
-</pre></div>
-</div>
-<p>面倒であれば，学内の ホストは proxy を使わない</p>
+<section id="ied">
+<h2>1. IED で，必要なもの<a class="headerlink" href="#ied" title="この見出しへのパーマリンク"></a></h2>
+<p>特に必要ありません．
+IED の環境では，Web ブラウザを用いて，IEDの裏側にいるGPUサーバーとつなぎ，計算をしてもらうという
+操作を行います．
+具体的には，</p>
 <ul class="simple">
-<li><p><cite>*uec.ac.jp</cite></p></li>
+<li><p>Firefox などの Web ブラウザ(Linux 準拠)</p></li>
+<li><p>GPU サーバー(IED 側で準備済み)</p></li>
+<li><p>GPU サーバーがアクセスできるファイルシステム(IED 側で準備済み，後述でファイルの置き場所指定)</p></li>
+<li><p>演習を提供する jupyter notebook を解釈できる環境(IED 側で準備済み)</p></li>
 </ul>
-<p>という選択でもOKです（たぶん）．</p>
+<p>となります．
+逆にいままで VScode などで書いてた人は，手間が増えるかもしれません．
+自分でGPU持っていて，環境をつくれるのであれば問題ないですが．．．</p>
+<p>なお Google Colab とかでも演習はできると思いますが，Colab は使えば使うほど遅いTPUに
+割り当てられる傾向が見られるので，長時間の無料使用枠での実験はお勧めしません．</p>
 </section>
 <section id="iedjupyterhub">
-<h2>3. IEDでJupyterHub を使うための準備<a class="headerlink" href="#iedjupyterhub" title="この見出しへのパーマリンク"></a></h2>
-<p>この実験では，Webブラウザを介して <code class="docutils literal notranslate"><span class="pre">python</span></code> での実験を行います．
-そのための環境は <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code> を用います．
-前期のプログラミング言語実験 python で行った環境とほぼ一緒です．</p>
-<p>ちょっと違うのは Jupyter を提供してくれるのが計算機サーバになっている点で
-GPU も使えます．このため IED の GPU サーバーをホストとして JupyterHub と呼ばれるサービスにアクセスします．</p>
-<p>IED で JupyterHub を使うためには，まず，Jupyter のノートの保管場所を作る必要があります．
+<h2>2. IEDでJupyterHub を使うための準備<a class="headerlink" href="#iedjupyterhub" title="この見出しへのパーマリンク"></a></h2>
+<p>この実験では，Webブラウザを介して <cite>python</cite> での実験を行います．
+そのための環境は <cite>Jupyter notebook</cite> を用います．
+前期のプログラミング言語実験 <a href="#id2"><span class="problematic" id="id3">`</span></a>python で行った環境とほぼ一緒です．</p>
+<p>ちょっと違うのは <cite>Jupyter</cite> を提供してくれるのが計算機サーバになっている点です．
+(前期の実験は，各端末がサーバだった)
+このため IED の GPU サーバーをホストとして <cite>JupyterHub</cite> と呼ばれるサービスにアクセスします．</p>
+<p>IED で <cite>JupyterHub</cite> を使うためには，まず， <cite>Jupyter</cite> のノートの保管場所を作る必要があります．
 これは，各アカウントホームディレクトリ下にある． <cite>~/notebook</cite> フォルダが指定されています．</p>
-<p>まず <code class="docutils literal notranslate"><span class="pre">sol.edu.cc.uec.ac.jp</span></code> へログインして， <cite>IED_HOME</cite> の下に
-<cite>notebook</cite> ディレクトリを作ります．</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ssh<span class="w"> </span>sol.edu.cc.uec.ac.jp
-</pre></div>
-</div>
-<p>この時点で， <cite>~/IED_HOME/notebook</cite> が在るかを確認してください．
-なければ，</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>IED_HOME
-$<span class="w"> </span>mkdir<span class="w"> </span>notebook
-</pre></div>
-</div>
-<p>のようにして，空のディレクトリを作ってもらえるようにしてもらえればOKです．</p>
 </section>
 <section id="jupyter">
-<h2>4. Jupyter による実験<a class="headerlink" href="#jupyter" title="この見出しへのパーマリンク"></a></h2>
-<p>大学内のネットワークに繋げない場合は，VPN設定とプロキシ設定を確認してください．</p>
-<p>この実験では，いずれの課題もGPUを数時間専有することが必要です.
+<h2>3. Jupyter による実験<a class="headerlink" href="#jupyter" title="この見出しへのパーマリンク"></a></h2>
+<p>この実験では，いずれの課題もGPUを数時間専有することが必要になってきます(特に後半の実験).
 これらの GPU サーバへは，Web を解してアクセスし，実験は Jupyter notebook を用いることになります．
-今年から IEDの72個のGPUがありますが，一人１個のGPU割り当てようとすると若干足りないので，
+IEDには72個のGPUがありますが，一人１個のGPU割り当てようとすると若干足りないので，
 授業内で説明するルールでGPU を割り振りたいと思います．</p>
 <p>なお GPU の空きに関しては</p>
 <p><a class="reference external" href="http://gpu1.ied.inf.uec.ac.jp/">http://gpu1.ied.inf.uec.ac.jp/</a></p>
@@ -148,8 +121,8 @@ $<span class="w"> </span>mkdir<span class="w"> </span>notebook
 <p>ガイダンスで説明したGPUサーバーを選択してください．
 すると，Sign in ウィンドウが開きますので，ここで，
 大学アカウントのユーザー名とパスワードを入れてください．</p>
-<p>このとき，前述の <cite>notebook</cite> ディレクトリがないとエラーが起きます．</p>
-<p>適当に Jupyter notebook を作ると <cite>notebook</cite> ディレクトリにファイルができるので
+<p>このとき，前述の <cite>~/notebook</cite> ディレクトリがないとエラーが起きます．</p>
+<p>適当に Jupyter notebook を作ると <cite>~/notebook</cite> ディレクトリにファイルができるので
 確認してください．</p>
 </section>
 </section>
@@ -158,8 +131,8 @@ $<span class="w"> </span>mkdir<span class="w"> </span>notebook
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="メディア情報学実験（機械学習/パターン認識）" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Q1.html" class="btn btn-neutral float-right" title="課題１ 多層パーセプトロンによるパターン識別" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="メディア情報学実験（情報検索・認識（画像））" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Q1.html" class="btn btn-neutral float-right" title="課題１ 機械学習とニューラルネットワーク" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
