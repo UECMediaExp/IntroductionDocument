@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>課題３ 深層学習その２ &mdash; Media Experiment Machine Learning / Computer Vision  ドキュメント</title>
+  <title>課題3 機械学習基礎2，教師なし学習 &mdash; Media Experiment Machine Learning / Computer Vision  ドキュメント</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -21,8 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="追加情報" href="Appendix.html" />
-    <link rel="prev" title="課題2 深層学習その１" href="Q2.html" /> 
+    <link rel="next" title="課題４ 画像応用" href="Q4.html" />
+    <link rel="prev" title="課題2 画像認識基礎" href="Q2.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,14 +43,17 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Environment.html">実験環境の解説</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Q1.html">課題１ 機械学習とニューラルネットワーク</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Q2.html">課題2 深層学習その１</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">課題３ 深層学習その２</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="Q1.html">課題１ 機械学習基礎１，教師あり学習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Q2.html">課題2 画像認識基礎</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">課題3 機械学習基礎2，教師なし学習</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">課題3のテンプレートの取得</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">テンプレートフォルダの取得</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">課題の提出</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Q4.html">課題４ 画像応用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Q5.html">課題５ 自然言語基礎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Q6.html">課題6 生成AI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Appendix.html">追加情報</a></li>
 </ul>
 
@@ -68,7 +71,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">課題３ 深層学習その２</li>
+      <li class="breadcrumb-item active">課題3 機械学習基礎2，教師なし学習</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/Q3.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -79,19 +82,21 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>課題３ 深層学習その２<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h1>
+<h1>課題3 機械学習基礎2，教師なし学習<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h1>
+<p>課題は更新しますので，担当教員のコピー指示が出るまで待ってください．
+（指示前に取得した場合，古い課題を解いてしまう可能性があります）</p>
 <section id="id2">
 <h2>課題3のテンプレートの取得<a class="headerlink" href="#id2" title="この見出しへのパーマリンク"></a></h2>
 <p>課題は IED のフォルダに置いてあります．</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>/usr/local/class/media/kadai3
 </pre></div>
 </div>
-<p>これを各自で取得してもらいます．（まだ準備中です．準備完了したらお知らせします）</p>
+<p>これを各自で取得してもらいます．（準備完了したらお知らせします）</p>
 </section>
 <section id="id3">
 <h2>テンプレートフォルダの取得<a class="headerlink" href="#id3" title="この見出しへのパーマリンク"></a></h2>
 <p>作業を行うため，テンプレートをフォルダごと IED のローカルマシンにクローンします．
-場所は，準備のところで述べたように <cite>~/notebook</cite> ディレクトリの下に無いと <cite>jupyterhub`</cite> が
+場所は，準備のところで述べたように <cite>~/notebook</cite> ディレクトリの下に無いと <cite>jupyterhub</cite> が
 読み込めませんので注意してください．</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/notebook
 $<span class="w"> </span>rsync<span class="w"> </span>-avz<span class="w"> </span>/usr/local/class/media/kadai3/<span class="w"> </span>kadai3/
@@ -115,14 +120,14 @@ PDFにするにはブラウザの印刷を選択して，PDFで保存をすれ�
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Q2.html" class="btn btn-neutral float-left" title="課題2 深層学習その１" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Appendix.html" class="btn btn-neutral float-right" title="追加情報" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Q2.html" class="btn btn-neutral float-left" title="課題2 画像認識基礎" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Q4.html" class="btn btn-neutral float-right" title="課題４ 画像応用" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, Keiji Yanai/Hayaru Shouno.</p>
+    <p>&#169; Copyright 2024, Keiji Yanai/Hayaru Shouno.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
