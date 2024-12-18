@@ -27,9 +27,9 @@ IED の環境では，Web ブラウザを用いて，IEDの裏側にいるGPUサ
 
 この実験では，Webブラウザを介して `python` での実験を行います．
 そのための環境は `Jupyter notebook` を用います．
-前期のプログラミング言語実験 `python で行った環境とほぼ一緒です．
+前期のプログラミング言語実験 `python` で行った環境とほぼ一緒です．
 
-ちょっと違うのは `Jupyter` を提供してくれるのが計算機サーバになっている点です．
+ちょっと違うのは `Jupyter` を提供してくれるのが計算機(GPU)サーバになっている点です．
 (前期の実験は，各端末がサーバだった)
 このため IED の GPU サーバーをホストとして `JupyterHub` と呼ばれるサービスにアクセスします．
 
@@ -43,12 +43,12 @@ IED で `JupyterHub` を使うためには，まず， `Jupyter` のノートの
 
 この実験では，いずれの課題もGPUを数時間専有することが必要になってきます(特に後半の実験).
 これらの GPU サーバへは，Web を解してアクセスし，実験は Jupyter notebook を用いることになります．
-IEDには72個のGPUがありますが，一人１個のGPU割り当てようとすると若干足りないので，
 授業内で説明するルールでGPU を割り振りたいと思います．
 
 なお GPU の空きに関しては
 
-http://gpu1.ied.inf.uec.ac.jp/
+* 実験1組 http://gpu1.ied.inf.uec.ac.jp/?g=1
+* 実験2組 http://gpu1.ied.inf.uec.ac.jp/?g=2
 
 を確認してください．
 
@@ -60,3 +60,8 @@ http://gpu1.ied.inf.uec.ac.jp/
 
 適当に Jupyter notebook を作ると `~/notebook` ディレクトリにファイルができるので
 確認してください．
+
+また，GPU がどうしても確保できない場合の措置として，CED のGPUサーバを使うことも可能です．
+CED のGPUサーバは以下のURLからアクセスできます．
+
+* CED GPU サーバー http://gpu01.ced.cei.uec.ac.jp/
